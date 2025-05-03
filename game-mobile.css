@@ -8,7 +8,9 @@ body {
     overflow: hidden;
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
+    height: 100vh;  /* ← ここを追加 */
 }
+
 
 /* ゲームコンテンツ領域 */
 #game-content {
@@ -20,10 +22,10 @@ body {
 }
 
 #title-screen,
-#game-content {
-    height: 100%;
+#game-content,
+#game-screen {
+    height: 100vh;
 }
-
 
 /* 背景画像 */
 #background {
