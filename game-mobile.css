@@ -1,7 +1,9 @@
 html, body {
     height: 100%;
     overflow: hidden; /* 画面スクロールを防ぐ */
-  }
+    touch-action: none; /* ← これがポイント */
+}
+
   
 /* 全体設定 */
 body {
@@ -20,7 +22,7 @@ body {
 /* ゲームコンテンツ領域 */
 #game-content {
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     position: relative;
     background-color: black;
     overflow: hidden;
