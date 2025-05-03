@@ -265,6 +265,7 @@ document.getElementById('background').src = 'assets/yure-image/' + baseName + '-
     bgmPlayer.src = newBgmSrc;
     bgmPlayer.loop = true;
     bgmPlayer.play();
+    window.scrollTo(0, 0);
   }
 } else {
   // scene.bgm が空の時だけ止める
@@ -514,8 +515,8 @@ function advanceHandler() {
 
 isLocked = true;         // ロック開始
 setTimeout(() => {
-    isLocked = false;    // 1秒後に解除
-}, 1000);
+    isLocked = false;    // 0.5秒後に解除
+}, 500);
   if (isTyping) {
     skipTyping();
   } else {
