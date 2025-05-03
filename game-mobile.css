@@ -22,26 +22,29 @@ body {
 /* ゲームコンテンツ領域 */
 #game-content {
     width: 100vw;
-    height: 100svh;
+    height: calc(100svh - 100px); /* 上下合計40pxの余白を確保（例：上下20pxずつ） */
+    margin: 50px 0;              /* 上下20pxの黒余白を入れる */
     position: relative;
     background-color: black;
     overflow: hidden;
 }
 
 #title-screen,
-#game-content,
 #game-screen {
     height: 100vh;
 }
 
-/* 背景画像 */
 #background {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;         /* ← ここを cover に戻す */
+    object-position: center center;
     z-index: 1;
 }
+
 
 .character {
     position: absolute;
@@ -53,12 +56,12 @@ body {
 
 .character.left {
     left: -35%;
-    bottom: -8%;
+    bottom: -10%;
 }
 
 .character.right {
     right: -35%;
-    bottom: -8%;
+    bottom: -10%;
 }
 
 /* テキストウィンドウ */
@@ -66,13 +69,13 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     background-color: rgba(0,0,0,0.7);
     padding: 10px;
     box-sizing: border-box;
     z-index: 3;
     font-size: 18px;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 #menu-toggle {
@@ -403,16 +406,6 @@ body {
     cursor: pointer;
   }
   
-  .log-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-    font-size: 16px;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    text-align: left;
-  }
-
   .fade-out {
     position: fixed;
     top: 0;
@@ -492,7 +485,7 @@ body {
     line-height: 1.6;
     white-space: pre-wrap;
     text-align: left;
-    max-height: 50vh;        /* モバイルで縦画面に収めやすく */
+    max-height: 60vh;        /* モバイルで縦画面に収めやすく */
 }
 
 #ending-overlay {
