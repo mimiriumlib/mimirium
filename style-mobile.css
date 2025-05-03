@@ -19,24 +19,7 @@ body {
     height: auto;
   }
   
-  
-  .shelf a {
-    display: block;
-    background-color: #2a4b77;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 8px;
-    font-size: 1.2em;
-    transition: transform 0.1s ease, background-color 0.1s ease;
-  }
-  
-  .shelf a:active {
-    transform: scale(0.95);
-    background-color: #1e3555;
-  }
-  
+
   
   .about, .updates {
     margin-top: 30px;
@@ -72,21 +55,21 @@ body {
     text-align: center;
   }
 
-.footer-menu {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #2a4b77;
-  display: flex;
-  justify-content: space-around;
-  padding: 8px 0;
-}
+  .footer-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2a4b77;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+  }  
   
   .footer-item {
     color: white;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 1.0em;
   }
 
   /* 全体のリンクの色を統一 */
@@ -165,4 +148,39 @@ a {
     background-color: #1e3555;
   }
   
+  .shelf {
+    margin: 20px 0;
+  }
+  
+  .shelf-list {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* iOS用の慣性スクロール */
+    padding: 10px 0;
+  }
+  
+  .shelf-item {
+    flex: 0 0 auto;
+    width: 150px;
+    margin-right: 12px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .shelf-item img.cover {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .shelf-item .title {
+    margin-top: 6px;
+    font-size: 0.9em;
+    color: #2a4b77;
+  }
+  
+  .shelf-item:active img.cover {
+    transform: scale(0.95);
+  }
   
