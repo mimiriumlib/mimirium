@@ -22,7 +22,8 @@ body {
 /* ゲームコンテンツ領域 */
 #game-content {
     width: 100vw;
-    height: 100svh;
+    height: calc(100svh - 50px);  /* safe-area height から 50px 引いて余裕を作る */
+    margin: 25px 0;               /* 上下に黒余白を作る（例：25pxずつ） */
     position: relative;
     background-color: black;
     overflow: hidden;
@@ -68,7 +69,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 50vh;
+    height: 45vh;
     background-color: rgba(0,0,0,0.7);
     padding: 10px;
     box-sizing: border-box;
