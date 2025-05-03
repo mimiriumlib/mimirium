@@ -143,11 +143,11 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
     });
 
     setTimeout(() => {
+        if (callback) callback();
       fade.classList.remove('active'); // ★ここ追加！最後に非表示
         fade.style.opacity = 0;           // ★透明に戻して次に備える
         window.scrollTo(0, 0);
         isFading = false;
-        if (callback) callback();
     }, duration);
 }
 
