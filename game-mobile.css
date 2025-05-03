@@ -6,6 +6,8 @@ body {
     color: #fff;
     font-size: 14px;
     overflow: hidden;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ゲームコンテンツ領域 */
@@ -16,6 +18,12 @@ body {
     background-color: black;
     overflow: hidden;
 }
+
+#title-screen,
+#game-content {
+    height: 100%;
+}
+
 
 /* 背景画像 */
 #background {
