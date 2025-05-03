@@ -46,21 +46,22 @@ body {
 
 .character {
     position: absolute;
-    bottom: 10vh;
-    width: 100%;        /* ← モバイルに合わせて小さめに調整 */
-    max-width: none;   /* ← 最大幅の制限を外す（任意） */
+    top: 20%;          /* ← 上から50pxに配置 */
+    width: 100%;        /* 必要に応じて調整 */
+    max-width: none;   
     z-index: 2;
 }
 
 .character.left {
     left: -35%;
-    bottom: -5%;
+    /* bottom: -5%; → 削除 */
 }
 
 .character.right {
     right: -35%;
-    bottom: -5%;
+    /* bottom: -5%; → 削除 */
 }
+
 
 /* テキストウィンドウ */
 #text-window {
