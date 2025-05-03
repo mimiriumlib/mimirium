@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     overflow: hidden; /* 画面スクロールを防ぐ */
-    touch-action: none; /* ← これがポイント */
+    touch-action: manipulation;
 }
 
   
