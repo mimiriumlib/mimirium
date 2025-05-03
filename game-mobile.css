@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    overflow: hidden; /* 画面スクロールを防ぐ */
+  }
+  
 /* 全体設定 */
 body {
     margin: 0;
