@@ -43,7 +43,7 @@ body {
   .shelf h2 {
     font-size: 20px;
     border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-align: center;
   }
   
@@ -183,4 +183,135 @@ a {
   .shelf-item:active img.cover {
     transform: scale(0.95);
   }
+  
+  .book-list-centered {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .book-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+  }
+  
+  .book-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .book-thumb {
+    width: 100%;
+    height: auto;
+  }
+  
+  .book-info {
+    padding: 12px;
+  }
+  
+  .book-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2a4b77;
+  }
+  
+  .book-description {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+  }
+
+  .bookshelf h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .story-main {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .story-main img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .story-main h1 {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    text-align: center;
+    color: #2a4b77;
+  }
+  
+  .story-main p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .story-section {
+    background-color: #f1f3f5;      /* 柔らかいグレー */
+    border-radius: 12px;
+    padding: 20px;                  /* モバイル用に少しコンパクト */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 影を軽めに */
+    margin-top: 20px;
+  }
+  
+  
+  .story-play-button {
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    padding: 12px 0;
+    background-color: #2a4b77;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+  
+  .story-play-button:active {
+    transform: scale(0.95);
+    background-color: #1e3555;
+    color: white;
+  }
+
+  .story-play-button,
+.story-play-button:visited {
+  color: white;
+}
+
+
+  .story-footer {
+    font-size: 0.8em;
+    color: #888;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .site-header-2 {
+    width: 100%;
+    text-align: left;  /* 左寄せ */
+    border-bottom: 2px solid #ccc;  /* 下にライン */
+    margin-bottom: 20px;
+  }
+  
+  .header-logo-2 {
+    width: 150px;       /* 小さめに調整 */
+    max-width: 100%;
+    height: auto;
+  }
+  
   
