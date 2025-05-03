@@ -1,0 +1,532 @@
+/* 全体設定 */
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* ゲームコンテンツ領域 */
+#game-content {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+
+/* 背景画像 */
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.character {
+    position: absolute;
+    bottom: 10vh;
+    width: 120%;        /* ← モバイルに合わせて小さめに調整 */
+    max-width: none;   /* ← 最大幅の制限を外す（任意） */
+    z-index: 2;
+}
+
+.character.left {
+    left: -35%;
+    bottom: -8%;
+}
+
+.character.right {
+    right: -35%;
+    bottom: -8%;
+}
+
+/* テキストウィンドウ */
+#text-window {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0,0,0,0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 3;
+    font-size: 18px;
+    overflow-y: auto;
+}
+
+#menu-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 12px; /* タップしやすく少し広め */
+    cursor: pointer;
+    z-index: 1001;
+    border: none;
+}
+
+#game-menu {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    right: 5%;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.game-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1em; /* モバイル用に文字サイズ調整 */
+}
+
+.game-menu-list {
+    display: flex;
+    flex-direction: column; /* 縦並びに変更 */
+    gap: 8px;               /* ボタン間の余白を少し増加 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.game-menu-list button {
+    padding: 12px;
+    font-size: 1em;
+    background: linear-gradient(to right, #444, #222);
+    color: #fff;
+    border: 1px solid #666;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    width: 100%; /* 親幅いっぱいに */
+}
+
+.game-menu-list button:active {
+    background: linear-gradient(to right, #666, #333);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+  
+  #warning {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+  }
+
+  #title-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* 画面全体 */
+    overflow: hidden;
+  }
+  
+  #title-screen .title-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  #choices {
+    margin-top: 50px; /* 上の余白を少し縮める */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-button {
+    background-color: #fff;
+    color: #000;
+    width: 80%;             /* 画面幅の8割に変更 */
+    max-width: 300px;       /* 大きくなりすぎない制限 */
+    padding: 14px 20px;     /* タップしやすく余白増 */
+    margin: 8px 0;          /* 上下余白少し調整 */
+    border: 2px solid #2a4b77;
+    border-radius: 8px;     /* 角を少し丸く */
+    font-size: 1em;         /* 文字サイズ調整 */
+    font-family: "Georgia", serif;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.choice-button:active {
+    background-color: #2a4b77;
+    color: #fff;
+    transform: scale(0.98); /* 押した感のアニメーション */
+}
+
+
+/* ボタン配置（start-buttons 専用） */
+#title-screen .start-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-buttons button {
+    background-color: #fff;             /* 白背景 */
+    color: #2a4b77;                     /* 濃い青文字 */
+    font-family: "Georgia", serif;      /* 明朝系フォント */
+    border: 2px solid #2a4b77;          /* 枠線濃い青 */
+    padding: 12px 24px;                 /* モバイル向けにややコンパクト */
+    border-radius: 30px;
+    font-size: 1.1em;                   /* 少し控えめな文字サイズ */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    width: 250px;                         /* 画面幅に応じて可変 */
+    margin: 10px auto;                  /* 上下間隔、中央寄せ */
+}
+
+/* ホバー時（モバイルは疑似的にタップ感覚に） */
+.start-buttons button:hover,
+.start-buttons button:active {
+    background-color: #2a4b77;          /* 濃い青背景に反転 */
+    color: #fff;                        /* 白文字 */
+    transform: translateY(-2px);
+}
+
+  /* モーダルの背景 */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* モーダルの中身 */
+  .modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    font-family: "Georgia", serif;
+  }
+  
+  /* ボタン */
+  .modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .modal-button {
+    padding: 8px 20px;
+    border: none;
+    background-color: #2a4b77;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background-color: #1e3558;
+  }
+  
+  .modal {
+    display: none; /* 最初は非表示 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 背景暗くする */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .scene-modal-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .scene-modal-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .scene-modal-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .scene-modal-description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .scene-modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .scene-modal-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .scene-modal-button img {
+    width: 100%;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+  
+  .scene-modal-button span {
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  .scene-modal-close {
+    padding: 8px 20px;
+    border: none;
+    background-color: #2a4b77;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .scene-modal-close:hover {
+    background-color: #1e3558;
+  }
+  
+  .scene-modal-button img {
+    width: 100px;
+    height: 70px;
+    object-fit: cover; /* 中央をトリミングしてちょうど収める */
+    border-radius: 6px;
+    pointer-events: none;
+  }
+
+  .log-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    color: #fff;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #111;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .log-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .log-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    text-align: left;
+  }
+
+  .fade-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* デフォルトは黒 */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    z-index: 9999;
+  }
+  
+  .fade-out.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* 警告メッセージスタイル */
+  .warning-message {
+    color: #e63946; /* 赤色 */
+    font-size: 1.1em;
+    margin-top: 20px;
+    max-width: 80%;
+    line-height: 1.6;
+  }
+
+  #text-line p {
+    margin: 4px 0;         /* 上下5pxずつ余白 */
+    line-height: 1.5;      /* 行間を1.5倍にする */
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-5px, 0); }
+    40% { transform: translate(5px, 0); }
+    60% { transform: translate(-5px, 0); }
+    80% { transform: translate(5px, 0); }
+    100% { transform: translate(0, 0); }
+  }
+  
+  .shake {
+    animation: shake 0.4s ease;
+  }
+
+  img, #background, #char-left, #char-right {
+    user-drag: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;      /* モバイル向けにややコンパクト化 */
+    background: #111;
+    font-size: 16px;         /* 少し小さめの文字サイズ */
+    font-weight: bold;
+}
+
+.log-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;         /* ボタンもやや小さめ */
+    cursor: pointer;
+}
+
+.log-content {
+    flex: 1;
+    padding: 15px;           /* コンパクトに */
+    overflow-y: auto;
+    font-size: 18px;         /* テキストもやや小さく */
+    line-height: 1.6;
+    white-space: pre-wrap;
+    text-align: left;
+    max-height: 50vh;        /* モバイルで縦画面に収めやすく */
+}
+
+#ending-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;                /* 少し小さめ */
+    text-align: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    pointer-events: none;
+    flex-direction: column;
+    padding: 20px;                  /* モバイルでの余白 */
+}
+
+.ending-text {
+    font-size: 22px;                /* タイトルを少し小さく */
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin: 0;
+    display: block;
+    align-self: center;
+    text-align: center;
+}
+
+.ending-fade-in {
+    opacity: 1 !important;
+}
+
+.ending-fade-out {
+    opacity: 0 !important;
+}
+
+.ending-continue {
+    font-size: 16px;                /* 小さめ画面向けに調整 */
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 8px 12px;              /* タップしやすく */
+    background: rgba(255,255,255,0.1); /* 軽く背景をつけると見やすさUP */
+    border-radius: 6px;
+}
