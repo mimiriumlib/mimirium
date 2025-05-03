@@ -271,7 +271,6 @@ if (scene.se) {
   sePlayer.play();
 }
 
-
   // 最初のテキスト行
   currentLine = 1;
 
@@ -519,6 +518,8 @@ function toggleNext(enable) {
   const gameContent = document.getElementById('game-content');
 
   if (enable) {
+    window.scrollTo(0, 0);
+
     gameContent.addEventListener('click', advanceHandler);
     document.addEventListener('keydown', keyHandler);
   } else {
