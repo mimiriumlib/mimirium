@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幽霊病棟 - スタート</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+  <!-- タイトル画面 -->
+  <div id="title-screen">
+    <img src="yure/title.png" alt="タイトルロゴ" class="fullscreen-bg">
+    <div class="start-buttons">
+        <button class="start-button" onclick="startNewGame()">はじめから</button>
+        <button class="continue-button" onclick="continueGame()">つづきから</button>
+        <button class="start-button" onclick="openSettings()">環境設定</button>
+    </div>
+  </div>
+
+  <audio id="bgm-player" src="assets/bgm/yugamureiiki.mp3" autoplay loop></audio>
+
+  <audio id="se-player"></audio>
+
+  <div id="warning">
+    <p class="warning-message">
+        このサウンドノベルは全年齢対象ですが、<br>物語の中には暴力・流血などの描写が含まれます。<br>
+        グロテスクな表現が苦手な方は、ご注意ください。
+    </p>
+  </div>
+
+
+  <!-- ゲーム画面 -->
+  <div id="game-screen" style="display: none;">
+    <div id="game-content">
+      <img id="background" class="fullscreen-bg" src="" alt="背景">
+      <img id="char-left" class="character left" src="" alt="左キャラ" style="display: none;">
+      <img id="char-right" class="character right" src="" alt="右キャラ" style="display: none;">
+      <div id="choices" style="display: none;"></div>
+      <div id="text-window">
+        <p id="text-line"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- フェード用 -->
+  <div class="fade-out" id="fade"></div>
+  
+
+  <!--フェードアウト用-->
+  <div class="fade-out" id="fade"></div>
+
+  <!-- モーダル -->
+  <div id="modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <div class="modal-buttons">
+        <button id="modal-ok" class="modal-button">OK</button>
+        <button id="modal-cancel" class="modal-button" style="display: none;">キャンセル</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 環境設定モーダル -->
+<div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <p>音量設定</p>
+      <label>BGM音量: <input type="range" id="bgm-volume" min="0" max="1" step="0.1"></label><br><br>
+      <label>効果音音量: <input type="range" id="se-volume" min="0" max="1" step="0.1"></label>
+      <div class="modal-buttons">
+        <button class="modal-button" onclick="closeSettings()">閉じる</button>
+      </div>
+    </div>
+  </div>  
+
+  <script>
+
+    function fadeOut(color = '#000', duration = 1000, callback = null) {
+        const fade = document.getElementById('fade');
+
+        // フェード色と時間をセット
+        fade.style.backgroundColor = color;
+        fade.style.transitionDuration = (duration / 1000) + 's';
+
+        // フェード開始
+        fade.classList.add('active');
+
+        // 完了後にコールバック実行
+        setTimeout(() => {
+            if (callback) callback();
+            fade.classList.remove('active');
+        }, duration);
+    }
+
+    function fadeIn(color = '#000', duration = 1000, callback = null) {
+    const fade = document.getElementById('fade');
+
+    // フェード色と時間をセット
+    fade.style.backgroundColor = color;
+    fade.style.transitionDuration = (duration / 1000) + 's';
+
+    // 最初は真っ黒にする
+    fade.classList.add('active');
+    fade.style.opacity = 1;
+
+    // 次のフレームで透明にする（アニメーション開始）
+    requestAnimationFrame(() => {
+        fade.style.opacity = 0;
+    });
+
+    // 完了後にコールバック
+    setTimeout(() => {
+        fade.classList.remove('active'); // フェードを非表示に戻す
+        if (callback) callback();
+    }, duration);
+}
+
+
+    let scenarioData = [];
+let currentScene = 0;
+let currentLine = 0;
+let textInterval = null;
+const bgmPlayer = document.getElementById('bgm-player');  // ここに移動！
+bgmPlayer.volume = 0.3;
+const sePlayer = document.getElementById('se-player');
+sePlayer.volume = 0.4;
+
+// 警告クリック時のイベントは最初に登録！
+document.getElementById('warning').addEventListener('click', function() {
+  fadeOut('#000', 1000, function() {
+    document.getElementById('warning').style.display = 'none';
+    document.getElementById('game-screen').style.display = 'flex';
+    startGame();
+  });
+});
+
+
+function startGame() {
+  fetch('yureibyoto1.json')
+    .then(response => response.json())
+    .then(data => {
+      scenarioData = data;
+
+      // currentScene はそのまま（リセットしない）
+      if (currentScene === null) {  // はじめからの場合だけ初期化！
+        currentScene = 0;
+      }
+      currentLine = 0;
+      showScene();
+      console.log('starsgame！シーン:', currentScene);
+    });
+}
+
+
+// シーン表示
+function showScene() {
+    console.log('セーブしました！前シーン:', currentScene);
+  const scene = scenarioData[currentScene];
+  const textElement = document.getElementById('text-line');
+  textElement.innerHTML = '';
+
+  document.getElementById('text-line').innerHTML = '';
+  document.getElementById('choices').innerHTML = '';
+  document.getElementById('choices').style.display = 'none';
+
+  // 背景画像
+  document.getElementById('background').src = 'assets/yure-image/' + scene.background;
+
+  // 左キャラ
+  const charLeft = document.getElementById('char-left');
+  if (scene.character_left) {
+    charLeft.src = 'assets/yure-image/' + scene.character_left;
+    charLeft.style.display = 'block';
+  } else {
+    charLeft.style.display = 'none';
+  }
+
+  // 右キャラ
+  const charRight = document.getElementById('char-right');
+  if (scene.character_right) {
+    charRight.src = 'assets/yure-image/' + scene.character_right;
+    charRight.style.display = 'block';
+  } else {
+    charRight.style.display = 'none';
+  }
+
+  // BGM制御
+  if (scene.bgm) {
+  const basePath = location.origin + location.pathname.replace(/[^/]*$/, '');
+  const newBgmSrc = basePath + 'assets/bgm/' + scene.bgm;
+
+  if (bgmPlayer.src !== newBgmSrc) {
+    // BGMが違う時だけ切り替え
+    bgmPlayer.src = newBgmSrc;
+    bgmPlayer.loop = true;
+    bgmPlayer.play();
+  }
+} else {
+  // scene.bgm が空の時だけ止める
+  bgmPlayer.pause();
+  bgmPlayer.src = '';
+}
+
+
+  // SE制御
+if (scene.se) {
+  sePlayer.src = 'assets/se/' + scene.se;
+  sePlayer.play();
+}
+
+
+  // 最初のテキスト行
+  currentLine = 1;
+  showLine();
+
+  // シーン表示の最後にセーブ！
+  localStorage.setItem('currentScene', currentScene);
+  console.log('セーブしました！シーン:', currentScene);
+
+  playAnimation(scene.post_animation, scene.fade_color, scene.fade_duration);
+
+}
+
+function showLine() {
+  const scene = scenarioData[currentScene];
+  const line = scene['text' + currentLine];
+  const textElement = document.getElementById('text-line');
+
+  if (textInterval) clearInterval(textInterval);
+
+  if (line) {
+    const lineElement = document.createElement('p');
+    let index = 0;
+
+    textInterval = setInterval(() => {
+      textElement.innerHTML += line.charAt(index);
+      index++;
+      if (index >= line.length) {
+        clearInterval(textInterval);
+      }
+    }, 20);
+    textElement.appendChild(lineElement); 
+  }
+  toggleNext(true);
+}
+
+
+function showNextLine() {
+  currentLine++;
+  const scene = scenarioData[currentScene];
+  if (scene['text' + currentLine]) {
+    showLine();
+  } else {
+    // 選択肢があるかチェック
+    if (scene.choice1_text) {
+      showChoices(scene);  // 選択肢があるとき
+    } else {
+      // 次のシーン
+      if (currentScene < scenarioData.length - 1) {
+        const nextScene = scenarioData[currentScene + 1];
+
+// ① pre_animationを実行
+playAnimation(nextScene.pre_animation, nextScene.fade_color, nextScene.fade_duration, () => {
+        currentScene++;
+        currentLine = 1;
+        showScene();
+    });
+      } else {
+        console.log('シナリオ終了');
+      }
+    }
+  }
+}
+
+
+
+function playSE(fileName) {
+  const sePlayer = document.getElementById('se-player');
+  sePlayer.src = 'assets/se/' + fileName;  // ファイル名だけ渡す！
+  sePlayer.play();
+}
+
+function showWarningAndStart() {
+  console.log('警告文表示');
+  document.getElementById('warning').style.display = 'flex';
+}
+
+function startNewGame() {
+  const savedScene = localStorage.getItem('currentScene');
+
+  if (savedScene !== null) {
+    showModal('前回のデータを削除して最初から始めますか？', {
+  onOk: () => {
+    localStorage.removeItem('currentScene');
+    currentScene = 0;
+    startNewGame(); // 再スタート
+  },
+  onCancel: () => {
+    console.log('キャンセルされました');
+  }
+});
+
+  } else {
+    proceedNewGame();  // データが無ければすぐ開始
+  }
+}
+
+// 実際のゲーム開始処理
+function proceedNewGame() {
+  playSE('ok.mp3');
+  fadeOut('#000', 1000, function() {
+    document.getElementById('title-screen').style.display = 'none';
+    showWarningAndStart();
+  });
+}
+
+function continueGame() {
+    console.log('continueGame実行');
+
+  const savedScene = localStorage.getItem('currentScene');
+  if (savedScene !== null) {
+    currentScene = parseInt(savedScene);
+    currentLine = 0;
+    playSE('ok.mp3');
+    fadeOut('#000', 1000, function() {
+      document.getElementById('title-screen').style.display = 'none';
+      document.getElementById('game-screen').style.display = 'flex';
+      startGame();
+    });
+  } else {
+    showModal('セーブデータがありません');
+
+  }
+}
+
+function showModal(message, options = {}) {
+  const modal = document.getElementById('modal');
+  const modalMessage = document.getElementById('modal-message');
+  const okButton = document.getElementById('modal-ok');
+  const cancelButton = document.getElementById('modal-cancel');
+
+  modalMessage.textContent = message;
+  modal.style.display = 'flex';
+
+  // OKボタンイベント
+  okButton.onclick = () => {
+    modal.style.display = 'none';
+    if (options.onOk) options.onOk();
+  };
+
+  // キャンセルボタン
+  if (options.onCancel) {
+    cancelButton.style.display = 'inline-block';
+    cancelButton.onclick = () => {
+      modal.style.display = 'none';
+      options.onCancel();
+    };
+  } else {
+    cancelButton.style.display = 'none';  // キャンセルなしのとき
+  }
+}
+
+function openSettings() {
+  document.getElementById('settings-modal').style.display = 'flex';
+
+  // 現在の音量をスライダーに反映
+  document.getElementById('bgm-volume').value = bgmPlayer.volume;
+  document.getElementById('se-volume').value = sePlayer.volume;
+}
+
+function closeSettings() {
+  document.getElementById('settings-modal').style.display = 'none';
+}
+
+// 選択肢表示処理
+function showChoices(scene) {
+    toggleNext(false);
+  const choicesDiv = document.getElementById('choices');
+  choicesDiv.innerHTML = '';  // 前の選択肢クリア
+
+  let hasChoice = false;
+  for (let i = 1; i <= 3; i++) {
+    const text = scene[`choice${i}_text`];
+    const jump = scene[`choice${i}_jump`];
+
+    if (text) {
+      const button = document.createElement('button');
+      button.classList.add('choice-button');
+      button.textContent = text;
+      button.addEventListener('click', () => {
+        currentScene = jump - 1;
+        currentLine = 1;
+        toggleNext(true);
+        showScene();
+      });
+      choicesDiv.appendChild(button);
+      hasChoice = true;
+    }
+  }
+  choicesDiv.style.display = hasChoice ? 'flex' : 'none';
+}
+
+function toggleNext(enable) {
+  const gameContent = document.getElementById('game-content');
+  const keyHandler = function(e) {
+    if (e.key === 'Enter') showNextLine();
+  };
+
+  if (enable) {
+    gameContent.addEventListener('click', showNextLine);
+    document.addEventListener('keydown', keyHandler);
+  } else {
+    gameContent.removeEventListener('click', showNextLine);
+    document.removeEventListener('keydown', keyHandler);
+  }
+}
+
+function playAnimation(type, color, duration, callback) {
+    if (!type) {
+        // アニメーション無しならそのまま次へ
+        if (callback) callback();
+        return;
+    }
+
+    switch(type) {
+        case 'fadeOut':
+            fadeOut(color, duration, callback);
+            break;
+        case 'fadeIn':
+            fadeIn(color, duration, callback);
+            break;
+        default:
+            console.warn('未対応のアニメーション: ' + type);
+            if (callback) callback();
+            break;
+    }
+}
+
+// 音量変更時の処理
+document.getElementById('bgm-volume').addEventListener('input', function() {
+  bgmPlayer.volume = parseFloat(this.value);
+});
+document.getElementById('se-volume').addEventListener('input', function() {
+  sePlayer.volume = parseFloat(this.value);
+});
+
+  </script>
+
+</body>
+</html>

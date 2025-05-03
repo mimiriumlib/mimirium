@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background-color: #f9f8f6;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .site-header {
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .header-logo {
+    width: 60%;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  
+  .shelf a {
+    display: block;
+    background-color: #2a4b77;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+  }
+  
+  .shelf a:active {
+    transform: scale(0.95);
+    background-color: #1e3555;
+  }
+  
+  
+  .about, .updates {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .about2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  
+  .about h2, .updates h2, .shelf h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .shelf h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .copy {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 40px;
+    padding-bottom: 60px; /* ←フッター固定の分だけ下に余白を作る */
+    text-align: center;
+  }
+
+  .footer-menu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2a4b77;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+  }
+  
+  .footer-item {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+
+  /* 全体のリンクの色を統一 */
+a {
+    color: inherit;       /* 親要素の色を引き継ぐ */
+    text-decoration: none; /* 下線を消す（必要なら） */
+  }
+  
+  /* 特にvisited（既読）リンクの色も同じにする */
+  a:visited {
+    color: inherit;
+  }
+
+  .footer-menu a,
+  .footer-menu a:visited {
+  color: white;
+}
+  
+.terms-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .terms-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .terms-content h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  
+  .terms-content p,
+  .terms-content ul {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  
+  .terms-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .featured {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .featured-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .featured-link {
+    display: block;
+    background-color: #2a4b77;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px auto; /* 中央寄せ */
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+    max-width: 200px; /* ボタン幅を制限 */
+  }
+  
+  .featured-link:active {
+    transform: scale(0.95);
+    background-color: #1e3555;
+  }
+  
+  

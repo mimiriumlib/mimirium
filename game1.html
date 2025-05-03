@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幽霊病棟 | MIMIRIUM</title>
+  <link rel="stylesheet" href="style-pc.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ハンバーガーメニュー（PC版） -->
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span class="menu-label">MENU</span>
+    <i class="fas fa-bars menu-icon"></i>
+  </div>
+
+  <div class="menu" id="menu">
+    <iframe src="menu.html" style="border: none; width: 100%; height: 100%;" scrolling="no"></iframe>
+  </div>
+
+  <main style="max-width: 700px; margin: 80px auto; padding: 0 20px;">
+    <img src="covers/ghost2.png" alt="幽霊病棟カバー" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+
+    <section style="margin-top: 20px;">
+      <h1>幽霊病棟</h1>
+      <p><strong>ジャンル：</strong>ホラー / サスペンス / 青春 / 恋愛 / ファンタジー</p>
+      <p class="story-section">
+      ある夜、目覚めたあなたは、見覚えのない病院にいた。<br>
+      記憶を失い、自分が誰かも分からない。<br>
+      混乱するあなたの前に怪しげな男が現れ、言う。<br>
+      「お前は死んで幽霊になった。存在すらもこの世から消えたくなけりゃ、働くことだ」<br><br>
+      幽霊社会も楽ではない。<br>
+      これは人を驚かせるノルマと戦う、とある病院に棲まう幽霊たちの日常の話。</p>
+
+<p style="text-align: center; font-size: 0.9em; margin-top: 30px;">
+  ゲームをプレイする前に、必ず  
+  <a href="terms.html" target="_blank" style="color: #2a4b77; text-decoration: underline;">利用規約</a>  
+  をご一読ください。<br>
+  プレイを開始された方は、利用規約に同意いただいたものとみなします。
+</p>
+
+      <a href="#" class="play-button" onclick="openGameWindow()">PLAY</a>
+
+    </section>
+
+    <section style="margin-top: 40px; text-align: center;">
+      <p>この作品が気に入った方は、<strong>投げ銭</strong>でご支援いただけると嬉しいです。</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 MIMIRIUM All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const icon = document.querySelector('.menu-icon');
+
+      if (menu && icon) {
+        menu.classList.toggle('active');
+
+        if (icon.classList.contains('fa-bars')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    }
+
+    function openGameWindow() {
+  const width = 800;
+  const height = 600;
+  const left = (screen.width - width) / 2;
+  const top = (screen.height - height) / 2;
+
+  window.open(
+    'yureibyoto1.html',
+    'gameWindow',
+    `width=${width},height=${height},left=${left},top=${top},menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=no`
+  );
+}
+
+
+  </script>
+
+</body>
+</html>

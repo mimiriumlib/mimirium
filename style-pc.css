@@ -1,0 +1,305 @@
+body {
+    margin: 20px;
+    font-family: "Georgia", serif;
+    background-color: #f9f8f6;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px 10px;
+  }
+
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 4px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+  }
+
+  .shelf {
+    width: 38%;
+  }
+
+  .about {
+    width: 58%;
+  }
+
+  .shelf h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px;
+  }
+
+  .book-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .book-list li {
+    width: 300px;
+    text-align: center;
+  }
+
+  .book-list img {
+    width: 100%;
+    aspect-ratio: 10 / 7;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .book-list a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+
+  .book-title {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .about h2, .updates h2 {
+    font-size: 24px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+
+  .shelf a {
+    text-decoration: none;
+    color: #2a4b77;
+  }
+
+  .about p {
+    line-height: 1.6;
+  }
+
+  .updates {
+    background-color: #eee;
+    padding: 20px 10%;
+    margin-left: -20px;   /* ← bodyの余白を打ち消す */
+    margin-right: -20px;  /* ← 右側も打ち消す */
+  }
+
+  .updates ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .updates li {
+    margin-bottom: 8px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+    padding: 20px;
+  }
+
+  .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 600px;
+      height: auto;
+  }
+
+  /* ハンバーガーメニュー全体 */
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    color: #2a4b77;
+    margin-right: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-icon.active {
+    transform: rotate(90deg);
+    color: #777;
+  }
+
+  /* メニューリスト */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -240px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding: 60px 20px;
+    transition: right 0.3s;
+    z-index: 999;
+  }
+
+  .menu.active { right: 0; }
+
+  .menu a {
+    display: block;
+    text-decoration: none;
+    color: #2a4b77;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+  }
+
+  /* PC版はMENUラベル表示 */
+  .menu-label {
+    display: block;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #2a4b77;
+  }
+
+  .menu-section {
+    display: block;
+    color: #2a4b77;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    cursor: default;
+  }
+
+  .menu i {
+    min-width: 20px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* 規約ページ用スタイル */
+  .terms-heading {
+    font-size: 20px;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+
+  .terms-content p, .terms-content li {
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+
+  .terms-content ul {
+    padding-left: 20px;
+  }
+
+  .play-button {
+    background-color: #2a4b77;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 50px auto;       /* 上下20px、左右は自動で中央寄せ */
+    margin-top: 10px;
+    display: block;          /* inline-block → blockに変更（中央寄せのため） */
+    text-align: center;      /* ボタン内のテキストも中央揃え */
+  }
+  
+  .play-button:hover {
+    background-color: #1e3558;
+    transform: translateY(-2px);
+  }
+  
+  .story-section {
+    background-color: #f1f3f5;     /* 柔らかいグレー */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* うっすら影 */
+    margin-top: 20px;
+  }
+
+  .book-list-centered {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .book-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: #f1f3f5;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ← ここを変更！ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }  
+
+  .book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .book-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+  }
+  
+  .book-thumb {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .book-link:hover .book-thumb {
+    transform: scale(1.05);
+  }
+  
+  .book-info {
+    flex: 1;
+  }
+  
+  .book-title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .book-description {
+    font-size: 16px;
+    color: #444;
+  }
+
+  .bookshelf {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .bookshelf h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  

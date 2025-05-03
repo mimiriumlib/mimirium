@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>幽霊病棟 - スタート</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+  <!-- タイトル画面 -->
+  <div id="title-screen">
+    <img src="yure/title.png" alt="タイトルロゴ" class="fullscreen-bg">
+    <div class="start-buttons">
+        <button class="start-button" onclick="startNewGame()">はじめから</button>
+        <button class="continue-button" onclick="continueGame()">つづきから</button>
+        <button class="start-button" onclick="choiceScene()">シーン選択</button>
+        <button class="start-button" onclick="openSettings()">環境設定</button>
+    </div>
+  </div>
+
+  <audio id="bgm-player" src="assets/bgm/yugamureiiki.mp3" autoplay loop></audio>
+
+  <audio id="se-player"></audio>
+
+  <div id="warning">
+    <p class="warning-message">
+        このサウンドノベルは全年齢対象ですが、<br>物語の中には暴力・流血などの描写が含まれます。<br>
+        グロテスクな表現が苦手な方は、ご注意ください。
+    </p>
+  </div>
+
+
+  <!-- ゲーム画面 -->
+  <div id="game-screen" style="display: none;">
+    <div id="menu-toggle" onclick="toggleGameMenu()">
+      <i id="menu-toggle-icon" class="fas fa-angle-down"></i>
+    </div>
+    <!-- 展開されるメニュー画面 -->
+<div id="game-menu" style="display: none;">
+  <div class="game-menu-list">
+    <button onclick="showLog()">ログ表示</button>
+    <button id="auto-mode-button" onclick="toggleAutoMode()">オートモード：OFF</button>
+    <button onclick="backToTitle()">タイトルに戻る</button>
+  </div>  
+</div>
+    <div id="game-content">
+      <img id="background" class="fullscreen-bg" src="" alt="背景">
+      <img id="char-left" class="character left" src="" alt="左キャラ" style="display: none;">
+      <img id="char-right" class="character right" src="" alt="右キャラ" style="display: none;">
+      <div id="choices" style="display: none;"></div>
+      <div id="text-window">
+        <p id="text-line"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- フェード用 -->
+  <div class="fade-out" id="fade"></div>
+
+  <!-- モーダル -->
+  <div id="modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <p id="modal-message"></p>
+      <div class="modal-buttons">
+        <button id="modal-ok" class="modal-button">OK</button>
+        <button id="modal-cancel" class="modal-button" style="display: none;">キャンセル</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- 環境設定モーダル -->
+<div id="settings-modal" class="modal">
+    <div class="modal-content">
+      <p>音量設定</p>
+      <label>BGM音量: <input type="range" id="bgm-volume" min="0" max="1" step="0.1"></label><br><br>
+      <label>効果音音量: <input type="range" id="se-volume" min="0" max="1" step="0.1"></label>
+      <div class="modal-buttons">
+        <button class="modal-button" onclick="closeSettings()">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="scene-modal" class="scene-modal-container" style="display: none;">
+    <div class="scene-modal-content">
+      <h2 class="scene-modal-title">シーン選択</h2>
+      <p class="scene-modal-description">
+        シーン選択して始めると、つづきからのページ情報が上書きされます
+      </p>
+      <div class="scene-modal-buttons">
+        <button class="scene-modal-button" onclick="selectScene(3)">
+          <img src="assets/yure-image/yoru-roka.png" alt="scene3">
+          <span>第1章<br>はじまりの廊下</span>
+        </button>
+        <button class="scene-modal-button" onclick="selectScene(82)">
+          <img src="assets/yure-image/hiru-roka1.png" alt="scene82">
+          <span>第2章<br>朝の訪れ</span>
+        </button>
+        <button class="scene-modal-button" onclick="selectScene(206)">
+          <img src="assets/yure-image/hiru-entrance.png" alt="scene206">
+          <span>第3章<br>出会い</span>
+        </button>
+        <button class="scene-modal-button" onclick="selectScene(207)">
+          <img src="assets/yure-image/hiru-entrance.png" alt="scene207">
+          <span>第4章<br>真実</span>
+        </button>
+      </div>
+      <button class="scene-modal-close" onclick="closeSceneModal()">閉じる</button>
+    </div>
+  </div>
+  
+  <div id="log-modal" class="log-modal" style="display: none;">
+    <div class="log-header">
+      <span>ログ</span>
+      <button onclick="closeLog()">
+        <i class="fas fa-square-xmark" style="font-size: 32px;"></i>
+      </button>      
+    </div>
+    <div id="log-content" class="log-content"></div>
+  </div>
+  
+
+  <script>
+
+function fadeOut(color = '#000', duration = 1000, callback = null) {
+    const fade = document.getElementById('fade');
+
+    // フェード色と時間セット
+    fade.style.backgroundColor = color;
+    fade.style.transitionDuration = (duration / 1000) + 's';
+
+    // ★ 必ず最初に透明にする！
+    fade.style.opacity = 0;
+    fade.classList.add('active');
+
+    // 次のフレームで黒くする
+    requestAnimationFrame(() => {
+        fade.style.opacity = 1;
+    });
+
+    setTimeout(() => {
+      fade.classList.remove('active'); // ★ここ追加！最後に非表示
+        fade.style.opacity = 0;           // ★透明に戻して次に備える
+        if (callback) callback();
+    }, duration);
+}
+
+
+function fadeIn(color = '#000', duration = 1000, callback = null) {
+    const fade = document.getElementById('fade');
+
+    // 最初に画面を真っ黒にする
+    fade.style.backgroundColor = color;
+    fade.style.transitionDuration = (duration / 1000) + 's';
+    fade.style.opacity = 1; // 黒くして
+    fade.classList.add('active');
+
+    // ★一旦描画させてから（リフレッシュ）、透明にする
+    setTimeout(() => {
+        fade.style.opacity = 0;
+    }, 20); // ←ここが大事！（ほんの少し待つ）
+
+    // 透明になったら非表示にする
+    setTimeout(() => {
+        fade.classList.remove('active');
+        fade.style.opacity = 0;
+        if (callback) callback();
+    }, duration + 20);
+}
+
+
+    let scenarioData = [];
+let currentScene = 0;
+let currentLine = 0;
+let textInterval = null;
+let isTyping = false;      // 文字を描画中かどうか
+let logHistory = []; // ログを貯める配列
+let isSceneAuto = false;      // シーンごとの自動フラグ
+let autoTimer = null;         // オート用タイマー
+let autoMode = false;
+const bgmPlayer = document.getElementById('bgm-player');  // ここに移動！
+bgmPlayer.volume = 0.3;
+const sePlayer = document.getElementById('se-player');
+sePlayer.volume = 0.4;
+
+// 警告クリック時のイベントは最初に登録！
+document.getElementById('warning').addEventListener('click', function() {
+  fadeOut('#000', 1000, function() {
+    document.getElementById('warning').style.display = 'none';
+    document.getElementById('game-screen').style.display = 'flex';
+    startGame();
+  });
+});
+
+
+function startGame() {
+  fetch('yureibyoto1.json')
+    .then(response => response.json())
+    .then(data => {
+      scenarioData = data;
+
+      // currentScene はそのまま（リセットしない）
+      if (currentScene === null) {  // はじめからの場合だけ初期化！
+        currentScene = 0;
+      }
+      currentLine = 0;
+      showScene();
+      console.log('starsgame！シーン:', currentScene);
+    });
+}
+
+
+// シーン表示
+function showScene() {
+    console.log('セーブしました！前シーン:', currentScene);
+  const scene = scenarioData[currentScene];
+  const textElement = document.getElementById('text-line');
+  textElement.innerHTML = '';
+
+  document.getElementById('choices').innerHTML = '';
+  document.getElementById('choices').style.display = 'none';
+
+  // 背景画像
+  document.getElementById('background').src = 'assets/yure-image/' + scene.background;
+
+  // 左キャラ
+  const charLeft = document.getElementById('char-left');
+  if (scene.character_left) {
+    charLeft.src = 'assets/yure-image/' + scene.character_left;
+    charLeft.style.display = 'block';
+  } else {
+    charLeft.style.display = 'none';
+  }
+
+  // 右キャラ
+  const charRight = document.getElementById('char-right');
+  if (scene.character_right) {
+    charRight.src = 'assets/yure-image/' + scene.character_right;
+    charRight.style.display = 'block';
+  } else {
+    charRight.style.display = 'none';
+  }
+
+  // BGM制御
+  if (scene.bgm) {
+  const basePath = location.origin + location.pathname.replace(/[^/]*$/, '');
+  const newBgmSrc = basePath + 'assets/bgm/' + scene.bgm;
+
+  if (bgmPlayer.src !== newBgmSrc) {
+    // BGMが違う時だけ切り替え
+    bgmPlayer.src = newBgmSrc;
+    bgmPlayer.loop = true;
+    bgmPlayer.play();
+  }
+} else {
+  // scene.bgm が空の時だけ止める
+  bgmPlayer.pause();
+  bgmPlayer.src = '';
+}
+
+
+  // SE制御
+if (scene.se) {
+  sePlayer.src = 'assets/se/' + scene.se;
+  sePlayer.play();
+}
+
+
+  // 最初のテキスト行
+  currentLine = 1;
+
+  // テキストウィンドウ表示切替
+const textWindow = document.getElementById('text-window');
+textWindow.style.display = (scene.window === false) ? 'none' : 'block';
+
+// メニューボタン表示切替
+const menuToggle = document.getElementById('menu-toggle');
+menuToggle.style.display = (scene.menu === false) ? 'none' : 'block';
+
+  showLine();
+
+  isSceneAuto = !!scene.auto;
+  console.log(`シーンごとの自動フラグ　${isSceneAuto}`);
+  console.log(`現在のオートモードボタン　${autoMode}`);
+
+if (autoMode && isSceneAuto) {
+  console.log(`ここは通ってる！`);
+  startAutoScene();
+} else {
+  stopAutoScene(); // いったん停止（明示的に）
+}
+
+  // シーン表示の最後にセーブ！
+  localStorage.setItem('currentScene', currentScene);
+  console.log('セーブしました！シーン:', currentScene);
+
+  playAnimation(scene.post_animation, scene.fade_color, scene.fade_duration);
+
+}
+
+function showLine() {
+  const scene = scenarioData[currentScene];
+  const line = scene['text' + currentLine];
+  const textElement = document.getElementById('text-line');
+
+  if (textInterval) clearInterval(textInterval);
+
+  if (line) {
+    const lineElement = document.createElement('p');
+    let index = 0;
+    isTyping = true;
+
+    textInterval = setInterval(() => {
+      lineElement.textContent += line.charAt(index);
+      index++;
+      if (index >= line.length) {
+        clearInterval(textInterval);
+        isTyping = false;
+      }
+    }, 40);
+    textElement.appendChild(lineElement); 
+  }
+  addToLog(line);
+  toggleNext(true);
+}
+
+
+function showNextLine() {
+  stopAutoScene(); // 前のオートタイマーを止める（手動クリック含む）
+
+  currentLine++;
+  const scene = scenarioData[currentScene];
+
+  if (scene['text' + currentLine]) {
+    showLine();
+
+    // 🔽 オートモードなら自動送りを再開！
+    if (isSceneAuto) {
+      startAutoScene();
+    }
+
+  } else {
+    // 選択肢があるかチェック
+    if (scene.choice1_text) {
+      showChoices(scene);
+    } else {
+      // 次のシーン
+      const nextScene = scenarioData[currentScene + 1];
+
+      if (!nextScene || nextScene.scene_id === "end") {
+        showEnding();
+        return;
+      }
+
+      playAnimation(nextScene.pre_animation, nextScene.fade_color, nextScene.fade_duration, () => {
+        currentScene++;
+        currentLine = 1;
+        showScene();
+      });
+    }
+  }
+}
+
+
+function playSE(fileName) {
+  const sePlayer = document.getElementById('se-player');
+  sePlayer.src = 'assets/se/' + fileName;  // ファイル名だけ渡す！
+  sePlayer.play();
+}
+
+function showWarningAndStart() {
+  console.log('警告文表示');
+  document.getElementById('warning').style.display = 'flex';
+}
+
+function startNewGame() {
+  const savedScene = localStorage.getItem('currentScene');
+
+  if (savedScene !== null) {
+    showModal('前回のデータを削除して最初から始めますか？', {
+  onOk: () => {
+    localStorage.removeItem('currentScene');
+    currentScene = 0;
+    startNewGame(); // 再スタート
+  },
+  onCancel: () => {
+    console.log('キャンセルされました');
+  }
+});
+
+  } else {
+    proceedNewGame();  // データが無ければすぐ開始
+  }
+}
+
+// 実際のゲーム開始処理
+function proceedNewGame() {
+  playSE('ok.mp3');
+
+  // まずfadeOut（透明→黒）
+  fadeOut('#000', 1000, function() {
+    // fadeOut完了後に、タイトルを消して警告文を出す準備
+    document.getElementById('title-screen').style.display = 'none';
+    showWarningAndStart();
+    // そしてfadeIn（黒→透明）
+    fadeIn('#000', 1000, function() {
+    });
+  });
+}
+
+function continueGame() {
+    console.log('continueGame実行');
+
+  const savedScene = localStorage.getItem('currentScene');
+  if (savedScene !== null) {
+    currentScene = parseInt(savedScene);
+    currentLine = 0;
+    playSE('ok.mp3');
+    fadeOut('#000', 1000, function() {
+      document.getElementById('title-screen').style.display = 'none';
+      document.getElementById('game-screen').style.display = 'flex';
+      startGame();
+    });
+  } else {
+    showModal('セーブデータがありません');
+
+  }
+}
+
+function showModal(message, options = {}) {
+  const modal = document.getElementById('modal');
+  const modalMessage = document.getElementById('modal-message');
+  const okButton = document.getElementById('modal-ok');
+  const cancelButton = document.getElementById('modal-cancel');
+
+  modalMessage.innerHTML = message;
+  modal.style.display = 'flex';
+
+  // OKボタンイベント
+  okButton.onclick = () => {
+    modal.style.display = 'none';
+    if (options.onOk) options.onOk();
+  };
+
+  // キャンセルボタン
+  if (options.onCancel) {
+    cancelButton.style.display = 'inline-block';
+    cancelButton.onclick = () => {
+      modal.style.display = 'none';
+      options.onCancel();
+    };
+  } else {
+    cancelButton.style.display = 'none';  // キャンセルなしのとき
+  }
+}
+
+function openSettings() {
+  document.getElementById('settings-modal').style.display = 'flex';
+
+  // 現在の音量をスライダーに反映
+  document.getElementById('bgm-volume').value = bgmPlayer.volume;
+  document.getElementById('se-volume').value = sePlayer.volume;
+}
+
+function closeSettings() {
+  document.getElementById('settings-modal').style.display = 'none';
+}
+
+// 選択肢表示処理
+function showChoices(scene) {
+    toggleNext(false);
+  const choicesDiv = document.getElementById('choices');
+  choicesDiv.innerHTML = '';  // 前の選択肢クリア
+
+  let hasChoice = false;
+  for (let i = 1; i <= 3; i++) {
+    const text = scene[`choice${i}_text`];
+    const jump = scene[`choice${i}_jump`];
+
+    if (text) {
+      const button = document.createElement('button');
+      button.classList.add('choice-button');
+      button.textContent = text;
+      button.addEventListener('click', () => {
+        currentScene = jump - 1;
+        currentLine = 1;
+        toggleNext(true);
+        showScene();
+      });
+      choicesDiv.appendChild(button);
+      hasChoice = true;
+    }
+  }
+  choicesDiv.style.display = hasChoice ? 'flex' : 'none';
+}
+
+// 🔷 グローバルに定義する（関数の外に置く！）
+function advanceHandler() {
+  if (isTyping) {
+    skipTyping();
+  } else {
+    showNextLine();
+  }
+}
+
+function keyHandler(e) {
+  if (e.key === 'Enter') {
+    advanceHandler();
+  }
+}
+
+function toggleNext(enable) {
+  const gameContent = document.getElementById('game-content');
+
+  if (enable) {
+    gameContent.addEventListener('click', advanceHandler);
+    document.addEventListener('keydown', keyHandler);
+  } else {
+    gameContent.removeEventListener('click', advanceHandler);
+    document.removeEventListener('keydown', keyHandler);
+  }
+}
+
+
+
+function shakeBackground(duration = 400, callback = null) {
+    const background = document.getElementById('background');
+    if (!background) {
+        if (callback) callback();
+        return;
+    }
+
+    background.classList.add('shake');
+
+    // アニメーションが終わるタイミングでクラスを外して callback
+    setTimeout(() => {
+        background.classList.remove('shake');
+        if (callback) callback();
+    }, duration);
+}
+
+function playAnimation(type, color, duration, callback) {
+    if (!type) {
+        // アニメーション無しならそのまま次へ
+        if (callback) callback();
+        return;
+    }
+
+    switch(type) {
+        case 'fadeOut':
+            fadeOut(color, duration, callback);
+            break;
+        case 'fadeIn':
+            fadeIn(color, duration, callback);
+            break;
+        case 'shake':
+            shakeBackground(duration, callback);
+            break;
+        default:
+            console.warn('未対応のアニメーション: ' + type);
+            if (callback) callback();
+            break;
+    }
+}
+
+function choiceScene() {
+  document.getElementById('scene-modal').style.display = 'flex';
+}
+
+function closeSceneModal() {
+  document.getElementById('scene-modal').style.display = 'none';
+}
+
+function selectScene(sceneNumber) {
+  console.log(`シーン${sceneNumber}を選択`);
+  localStorage.setItem('currentScene', sceneNumber);
+  closeSceneModal();
+  continueGame();
+}
+
+
+function toggleGameMenu() {
+  const menu = document.getElementById('game-menu');
+  const toggle = document.getElementById('menu-toggle');
+  const icon = document.getElementById('menu-toggle-icon');
+  const isVisible = menu.style.display === 'block';
+
+  // メニュー表示切替
+  menu.style.display = isVisible ? 'none' : 'block';
+
+  // アイコン切り替え
+  icon.className = isVisible ? 'fas fa-angle-down' : 'fas fa-angle-up';
+}
+
+function backToTitle() {
+  showModal('タイトル画面に戻りますか？<br><br>タイトル画面に戻る場合、<br>「つづきから」を選択すると<br>同じシーンに戻ることができます。', {
+    onOk: () => {
+      location.reload(); // ← ここを fadeOut して戻るなどに変えてもOK
+    },
+    onCancel: () => {
+      console.log('キャンセル');
+    }
+  });
+}
+
+function toggleAutoMode() {
+  autoMode = !autoMode;
+  document.getElementById('auto-mode-status').textContent = autoMode ? 'ON' : 'OFF';
+
+  if (autoMode) {
+    startAutoMode();
+  } else {
+    stopAutoMode();
+  }
+}
+
+function addToLog(text) {
+  if (text.trim()) {
+    logHistory.push(text);
+  }
+}
+
+function showLog() {
+  const logModal = document.getElementById('log-modal');
+  const logContent = document.getElementById('log-content');
+
+  // ログをすべて反映
+  logContent.innerHTML = logHistory.map(line => `<div>${line}</div>`).join('');
+
+  // 一番下へスクロール
+  setTimeout(() => {
+    logContent.scrollTop = logContent.scrollHeight;
+  }, 0);
+
+  logModal.style.display = 'flex';
+}
+
+function closeLog() {
+  document.getElementById('log-modal').style.display = 'none';
+}
+
+function startAutoScene() {
+  stopAutoScene(); // 念のため既存のタイマーを消す
+  console.log(`オートモード　${autoMode}`);
+
+  if (!autoMode) return;
+
+  autoTimer = setInterval(() => {
+    showNextLine();
+  }, 3000); // 例：2.5秒ごとに次のセリフへ
+}
+
+function stopAutoScene() {
+  if (autoTimer) {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+}
+
+function toggleAutoMode() {
+  const btn = document.getElementById('auto-mode-button');
+
+  if (!autoMode) {
+    // オートON
+    autoMode = true;
+    btn.textContent = 'オートモード：ON';
+    startAutoScene();
+  } else {
+    // オートOFF
+    autoMode = false;
+    btn.textContent = 'オートモード：OFF';
+    stopAutoScene();
+  }
+}
+
+function skipTyping() {
+  const scene = scenarioData[currentScene];
+  const line = scene['text' + currentLine];
+
+  clearInterval(textInterval);
+  textInterval = null;
+  isTyping = false;
+
+  // 最後の <p> 要素に全文を上書きする
+  const lastP = document.querySelector('#text-line p:last-child');
+  if (lastP) {
+    lastP.textContent = line;
+  }
+}
+
+function skipTyping() {
+  const scene = scenarioData[currentScene];
+  const line = scene['text' + currentLine];
+
+  clearInterval(textInterval);
+  textInterval = null;
+  isTyping = false;
+
+  // 最後の <p> 要素に全文を上書きする
+  const lastP = document.querySelector('#text-line p:last-child');
+  if (lastP) {
+    lastP.textContent = line;
+  }
+}
+
+function showEnding() {
+  // ゲーム画面を非表示にして操作も無効化
+  document.getElementById('game-screen').style.display = 'none';
+  toggleNext(false);
+
+  // 黒背景オーバーレイ作成
+  const overlay = document.createElement('div');
+  overlay.id = 'ending-overlay';
+  document.body.appendChild(overlay);
+
+  // テキスト用要素を常駐させて追加（再利用する）
+  const textElement = document.createElement('p');
+  textElement.className = 'ending-text';
+  overlay.appendChild(textElement);
+
+  // 黒背景をじわっと表示（overlay自体）
+  setTimeout(() => {
+    overlay.style.opacity = '1';
+  }, 100);
+
+  const messages = [
+  '幽霊病棟   Chapter 1',
+  'Audio<br>DOVA-SYNDROME / 効果音ラボ / 無料効果音で遊ぼう！',
+  'Script & Backgrounds<br>Powered by OpenAI',
+  '©MIMIRIUM'
+  ];
+
+  let index = 0;
+
+  function showMessage() {
+    if (index < messages.length) {
+      textElement.innerHTML = messages[index];
+      textElement.classList.remove('ending-fade-out');
+      textElement.classList.remove('ending-fade-in');
+
+      // 再描画後にフェードインさせる
+      requestAnimationFrame(() => {
+        textElement.classList.add('ending-fade-in');
+      });
+
+      // 一定時間表示 → フェードアウト → 次へ
+      setTimeout(() => {
+        textElement.classList.remove('ending-fade-in');
+        textElement.classList.add('ending-fade-out');
+
+
+        setTimeout(() => {
+          textElement.textContent = '';
+          index++;
+          showMessage();
+        }, 1000); // フェードアウト時間
+      }, 2000); // 表示時間
+    } else {
+      // 最後は To be Continue を表示
+      overlay.innerHTML = `<p class="ending-continue">To be continued…</p>`;
+      overlay.style.pointerEvents = 'auto';
+
+      overlay.onclick = () => {
+  location.reload();
+};
+    }
+  }
+
+  setTimeout(() => {
+    showMessage();
+  }, 1600); // 黒フェード後に1文目表示
+}
+
+
+
+
+// 音量変更時の処理
+document.getElementById('bgm-volume').addEventListener('input', function() {
+  bgmPlayer.volume = parseFloat(this.value);
+});
+document.getElementById('se-volume').addEventListener('input', function() {
+  sePlayer.volume = parseFloat(this.value);
+});
+
+  </script>
+
+</body>
+</html>
