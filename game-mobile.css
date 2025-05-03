@@ -47,19 +47,19 @@ body {
 .character {
     position: absolute;
     bottom: 10vh;
-    width: 120%;        /* ← モバイルに合わせて小さめに調整 */
+    width: 100%;        /* ← モバイルに合わせて小さめに調整 */
     max-width: none;   /* ← 最大幅の制限を外す（任意） */
     z-index: 2;
 }
 
 .character.left {
     left: -35%;
-    bottom: -10%;
+    bottom: -5%;
 }
 
 .character.right {
     right: -35%;
-    bottom: -10%;
+    bottom: -5%;
 }
 
 /* テキストウィンドウ */
