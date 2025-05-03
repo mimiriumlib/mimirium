@@ -72,15 +72,16 @@ body {
     text-align: center;
   }
 
-  .footer-menu {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #2a4b77;
-    display: flex;
-    justify-content: space-around;
-    padding: 8px 0;
-  }
+.footer-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #2a4b77;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
   
   .footer-item {
     color: white;
