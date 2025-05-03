@@ -21,19 +21,19 @@ body {
 
 /* ゲームコンテンツ領域 */
 #game-content {
-
+    width: 100vw;
+    height: 100svh;
     padding: 25px 0;  /* ← 余白は padding で中に収める */
     box-sizing: border-box;
+    overflow: hidden;
 }
 
-#game-content,
+
 #title-screen,
 #game-screen {
-    width: 100vw;
-    height: 100svh;  /* ← 100vh → 100svh に統一する */
-    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
 }
-
 
 #background {
     position: absolute;
@@ -43,6 +43,7 @@ body {
     height: 100%;
     object-fit: cover; /* 画面いっぱいにフィットさせる */
     z-index: 1;
+    overflow: hidden;
 }
 
 
@@ -52,6 +53,7 @@ body {
     width: 100%;        /* 必要に応じて調整 */
     max-width: none;   
     z-index: 2;
+    overflow: hidden;
 }
 
 .character.left {
@@ -76,7 +78,7 @@ body {
     box-sizing: border-box;
     z-index: 3;
     font-size: 18px;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #menu-toggle {
