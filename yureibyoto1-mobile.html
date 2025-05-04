@@ -143,12 +143,17 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
     });
 
     setTimeout(() => {
-        if (callback) callback();
-      fade.classList.remove('active'); // ★ここ追加！最後に非表示
-        fade.style.opacity = 0;           // ★透明に戻して次に備える
+    if (callback) callback(); // まず scene 切り替えを呼ぶ
+
+    // ★ここでフェード層を外すのを少し遅らせる（例：300ms待つ）
+    setTimeout(() => {
+        fade.classList.remove('active'); // フェード非表示
+        fade.style.opacity = 0;          // 透明に戻す
         window.scrollTo(0, 0);
         isFading = false;
-    }, duration);
+    }, 300); // ←この300msが「猶予時間」
+}, duration);
+
 }
 
 
