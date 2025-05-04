@@ -142,17 +142,15 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
         fade.style.opacity = 1;
     });
 
-    setTimeout(() => {
-    if (callback) callback(); // まず scene 切り替えを呼ぶ
-
-    // ★ここでフェード層を外すのを少し遅らせる（例：300ms待つ）
-    setTimeout(() => {
-        fade.classList.remove('active'); // フェード非表示
-        fade.style.opacity = 0;          // 透明に戻す
-        window.scrollTo(0, 0);
-        isFading = false;
-    }, 300); // ←この300msが「猶予時間」
-}, duration);
+    setTimeout(async () => {
+        if (callback) await callback();  // showScene完了まで待つ
+        setTimeout(() => {  // フェード除去はさらに後ろに
+            fade.classList.remove('active');
+            fade.style.opacity = 0;
+            window.scrollTo(0, 0);
+            isFading = false;
+        }, 300);  // 300ms猶予（必要なら調整）
+    }, duration);
 
 }
 
@@ -228,8 +226,8 @@ function startGame() {
 
 
 // シーン表示
-function showScene() {
-    console.log('セーブしました！前シーン:', currentScene);
+async function showScene() {
+  console.log('セーブしました！前シーン:', currentScene);
   const scene = scenarioData[currentScene];
   const textElement = document.getElementById('text-line');
   textElement.innerHTML = '';
@@ -239,26 +237,34 @@ function showScene() {
 
   // 背景画像
 const baseName = scene.background.replace('.png', '');
-document.getElementById('background').src = 'assets/yure-image/' + baseName + '-mobile.png';
+const bgUrl = 'assets/yure-image/' + baseName + '-mobile.png';
 
+const charLeftUrl = scene.character_left ? 'assets/yure-image/' + scene.character_left : null;
+const charRightUrl = scene.character_right ? 'assets/yure-image/' + scene.character_right : null;
 
-  // 左キャラ
-  const charLeft = document.getElementById('char-left');
-  if (scene.character_left) {
-    charLeft.src = 'assets/yure-image/' + scene.character_left;
+const urlsToLoad = [bgUrl];
+if (charLeftUrl) urlsToLoad.push(charLeftUrl);
+if (charRightUrl) urlsToLoad.push(charRightUrl);
+
+await preloadImages(urlsToLoad);
+
+document.getElementById('background').src = bgUrl;
+
+const charLeft = document.getElementById('char-left');
+if (charLeftUrl) {
+    charLeft.src = charLeftUrl;
     charLeft.style.display = 'block';
-  } else {
+} else {
     charLeft.style.display = 'none';
-  }
+}
 
-  // 右キャラ
-  const charRight = document.getElementById('char-right');
-  if (scene.character_right) {
-    charRight.src = 'assets/yure-image/' + scene.character_right;
+const charRight = document.getElementById('char-right');
+if (charRightUrl) {
+    charRight.src = charRightUrl;
     charRight.style.display = 'block';
-  } else {
+} else {
     charRight.style.display = 'none';
-  }
+}
 
   // BGM制御
   if (scene.bgm) {
@@ -799,8 +805,17 @@ function showEnding() {
   }, 1600); // 黒フェード後に1文目表示
 }
 
-
-
+function preloadImages(urls) {
+    const promises = urls.map(url => {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = resolve;
+            img.onerror = resolve; // エラー時も先に進める
+        });
+    });
+    return Promise.all(promises);
+}
 
 // 音量変更時の処理
 document.getElementById('bgm-volume').addEventListener('input', function() {
