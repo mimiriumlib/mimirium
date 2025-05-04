@@ -9,6 +9,12 @@
 </head>
 <body>
 
+<!--ロード画面-->
+  <div id="loading-screen" style="position: fixed; display: flex; top:0; left:0; width:100%; height:100%; background:#000; color:#fff; display:none; flex-direction:column; justify-content:center; align-items:center; z-index:9999;">
+    <div>Now Loading...</div>
+    <div id="loading-spinner" style="margin-top:10px; width:40px; height:40px; border:4px solid #fff; border-top-color:transparent; border-radius:50%; animation: spin 1s linear infinite;"></div>
+  </div>
+
   <!-- タイトル画面 -->
   <div id="title-screen">
     <img src="assets/yure-image/title-mobile.png" alt="タイトルロゴ" class="title-logo">
@@ -124,6 +130,30 @@
 
   <script>
 
+window.addEventListener('load', async function() {
+    const loadingScreen = document.getElementById('loading-screen');
+
+    try {
+        // ② 画像一覧を取得
+        const imageList = await fetchImageList();
+
+        // ③ URLを整形（background に -mobile 追加）
+        const urls = processImageList(imageList);
+
+        // ④ プリロード開始
+        await preloadImages(urls);
+
+        console.log('画像プリロード完了！');
+
+    } catch (error) {
+        console.error('画像プリロードエラー:', error);
+    }
+
+    // ⑤ ロード完了後 → NowLoading 非表示 → タイトル画面（warningなどは触らない）
+    loadingScreen.style.display = 'none';
+});
+
+
 function fadeOut(color = '#000', duration = 1000, callback = null) {
     if (isFading) return; // フェード中なら何もしない
     isFading = true;
@@ -149,7 +179,7 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
             fade.style.opacity = 0;
             window.scrollTo(0, 0);
             isFading = false;
-        }, 300);  // 300ms猶予（必要なら調整）
+        }, 500);  // 300ms猶予（必要なら調整）
     }, duration);
 
 }
@@ -207,7 +237,6 @@ document.getElementById('warning').addEventListener('click', function() {
   });
 });
 
-
 function startGame() {
   fetch('yureibyoto1.json')
     .then(response => response.json())
@@ -223,7 +252,6 @@ function startGame() {
       console.log('starsgame！シーン:', currentScene);
     });
 }
-
 
 // シーン表示
 async function showScene() {
@@ -815,6 +843,21 @@ function preloadImages(urls) {
         });
     });
     return Promise.all(promises);
+}
+
+async function fetchImageList() {
+    const response = await fetch('loadimages.json');
+    const imageList = await response.json();
+    return imageList;
+}
+
+function processImageList(imageList) {
+    return imageList.map(item => {
+        if (item.type === 'background') {
+            return item.url.replace('.png', '-mobile.png');
+        }
+        return item.url;
+    });
 }
 
 // 音量変更時の処理
