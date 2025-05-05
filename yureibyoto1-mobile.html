@@ -308,7 +308,6 @@ if (charRightUrl) {
     bgmPlayer.src = newBgmSrc;
     bgmPlayer.loop = true;
     bgmPlayer.play();
-    window.scrollTo(0, 0);
   }
 } else {
   // scene.bgm が空の時だけ止める
@@ -353,6 +352,14 @@ if (autoMode && isSceneAuto) {
 
   playAnimation(scene.post_animation, scene.fade_color, scene.fade_duration);
 
+  safeScrollToTop();
+
+}
+
+function safeScrollToTop() {
+    if (window.scrollY > 0) {
+        setTimeout(() => window.scrollTo(0, 0), 100);
+    }
 }
 
 function showLine() {
@@ -577,8 +584,6 @@ function toggleNext(enable) {
   const gameContent = document.getElementById('game-content');
 
   if (enable) {
-    window.scrollTo(0, 0);
-
     gameContent.addEventListener('click', advanceHandler);
     document.addEventListener('keydown', keyHandler);
   } else {
