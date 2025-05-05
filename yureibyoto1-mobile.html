@@ -217,6 +217,7 @@ function fadeIn(color = '#000', duration = 1000, callback = null) {
     let scenarioData = [];
 let currentScene = 0;
 let currentLine = 0;
+let currentLineText = '';
 let textInterval = null;
 let isTyping = false;      // 文字を描画中かどうか
 let logHistory = []; // ログを貯める配列
@@ -366,6 +367,7 @@ function showLine() {
   const scene = scenarioData[currentScene];
   const line = scene['text' + currentLine];
   const textElement = document.getElementById('text-line');
+  currentLineText = line;
 
   if (textInterval) clearInterval(textInterval);
 
@@ -727,9 +729,14 @@ function startAutoScene() {
 
   if (!autoMode) return;
 
+  // 文字数に応じた時間調整
+  const baseTime = 1500;      // 最短1.5秒
+  const timePerChar = 100;    // 1文字あたり100ms
+  const totalTime = baseTime + currentLineText.length * timePerChar;
+
   autoTimer = setInterval(() => {
     showNextLine();
-  }, 3000); // 例：2.5秒ごとに次のセリフへ
+  }, totalTime);
 }
 
 function stopAutoScene() {

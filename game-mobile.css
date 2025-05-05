@@ -415,6 +415,7 @@ body {
     pointer-events: none;
     transition: opacity 1s ease;
     z-index: 9999;
+    overflow: hidden;
   }
   
   .fade-out.active {
@@ -552,4 +553,5 @@ body {
   background-color: black; /* デフォルトは黒、JSで色変更 */
   z-index: 9999;
   transition: left 0.5s ease; /* アニメーション速度 */
+  overflow: hidden;
 }
