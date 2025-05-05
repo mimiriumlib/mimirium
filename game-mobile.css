@@ -46,7 +46,7 @@ body {
 
 .character {
     position: absolute;
-    top: 20%;          /* ← 上から50pxに配置 */
+    top: 10%;          /* ← 上から50pxに配置 */
     width: 100%;        /* 必要に応じて調整 */
     max-width: none;   
     z-index: 2;
