@@ -530,7 +530,7 @@ body {
 .ending-continue {
   font-size: 22px;
   position: absolute;
-  bottom: 20px;
+  bottom: 100px;
   right: 30px;
   font-family: 'Georgia', serif;
   font-style: italic;
