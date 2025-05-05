@@ -230,7 +230,7 @@ bgmPlayer.volume = 0.3;
 const sePlayer = document.getElementById('se-player');
 sePlayer.volume = 0.4;
 let userVolume = bgmPlayer.volume; // 初期値をセット
-let userSEVolume = bgmPlayer.volume;
+let userSEVolume = sePlayer.volume;
 
 // 警告クリック時のイベントは最初に登録！
 document.getElementById('warning').addEventListener('click', function() {
@@ -445,6 +445,7 @@ function startNewGame() {
   onOk: () => {
     localStorage.removeItem('currentScene');
     currentScene = 0;
+    applyUserVolume();
     startNewGame(); // 再スタート
   },
   onCancel: () => {
@@ -453,8 +454,14 @@ function startNewGame() {
 });
 
   } else {
+    applyUserVolume();
     proceedNewGame();  // データが無ければすぐ開始
   }
+}
+
+function applyUserVolume() {
+  bgmPlayer.volume = userVolume;
+  sePlayer.volume = userSEVolume;
 }
 
 // 実際のゲーム開始処理
@@ -479,6 +486,7 @@ function continueGame() {
   if (savedScene !== null) {
     currentScene = parseInt(savedScene);
     currentLine = 0;
+    applyUserVolume();
     playSE('ok.mp3');
     fadeOut('#000', 1000, function() {
       document.getElementById('title-screen').style.display = 'none';
