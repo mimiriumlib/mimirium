@@ -487,7 +487,7 @@ body {
 }
 
 #ending-overlay {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -505,6 +505,7 @@ body {
     pointer-events: none;
     flex-direction: column;
     padding: 20px;                  /* モバイルでの余白 */
+    box-sizing: border-box;
 }
 
 .ending-text {
@@ -527,19 +528,28 @@ body {
 }
 
 .ending-continue {
-    font-size: 16px;                /* 小さめ画面向けに調整 */
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    font-family: 'Georgia', serif;
-    cursor: pointer;
-    pointer-events: auto;
-    padding: 8px 12px;              /* タップしやすく */
-    background: rgba(255,255,255,0.1); /* 軽く背景をつけると見やすさUP */
-    border-radius: 6px;
+  font-size: 22px;
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#slide-overlay {
+  position: fixed;
+  top: 0;
+  left: 100%; /* 最初は画面外（右側） */
+  width: 100%;
+  height: 100%;
+  background-color: black; /* デフォルトは黒、JSで色変更 */
+  z-index: 9999;
+  transition: left 0.5s ease; /* アニメーション速度 */
 }

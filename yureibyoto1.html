@@ -98,13 +98,13 @@
           <img src="assets/yure-image/hiru-roka1.png" alt="scene82">
           <span>第2章<br>朝の訪れ</span>
         </button>
-        <button class="scene-modal-button" onclick="selectScene(206)">
+        <button class="scene-modal-button" onclick="selectScene(300)">
           <img src="assets/yure-image/hiru-entrance.png" alt="scene206">
           <span>第3章<br>出会い</span>
         </button>
-        <button class="scene-modal-button" onclick="selectScene(207)">
+        <button class="scene-modal-button" onclick="selectScene(428)">
           <img src="assets/yure-image/hiru-entrance.png" alt="scene207">
-          <span>第4章<br>真実</span>
+          <span>第4章<br>デバッグ用</span>
         </button>
       </div>
       <button class="scene-modal-close" onclick="closeSceneModal()">閉じる</button>
@@ -121,6 +121,8 @@
     <div id="log-content" class="log-content"></div>
   </div>
   
+  <div id="slide-overlay"></div>
+
 
   <script>
 
@@ -141,10 +143,14 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
     });
 
     setTimeout(() => {
-      fade.classList.remove('active'); // ★ここ追加！最後に非表示
-        fade.style.opacity = 0;           // ★透明に戻して次に備える
-        if (callback) callback();
-    }, duration);
+    if (callback) callback(); // まず scene 切り替えを呼ぶ
+
+    // ★ここでフェード層を外すのを少し遅らせる（例：300ms待つ）
+    setTimeout(() => {
+        fade.classList.remove('active'); // フェード非表示
+        fade.style.opacity = 0;          // 透明に戻す
+    }, 500);
+}, duration);
 }
 
 
@@ -184,6 +190,8 @@ const bgmPlayer = document.getElementById('bgm-player');  // ここに移動！
 bgmPlayer.volume = 0.3;
 const sePlayer = document.getElementById('se-player');
 sePlayer.volume = 0.4;
+let userVolume = bgmPlayer.volume;
+let userSEVolume = bgmPlayer.volume;
 
 // 警告クリック時のイベントは最初に登録！
 document.getElementById('warning').addEventListener('click', function() {
@@ -245,19 +253,32 @@ function showScene() {
 
   // BGM制御
   if (scene.bgm) {
-  const basePath = location.origin + location.pathname.replace(/[^/]*$/, '');
-  const newBgmSrc = basePath + 'assets/bgm/' + scene.bgm;
+    const basePath = location.origin + location.pathname.replace(/[^/]*$/, '');
+    const newBgmSrc = basePath + 'assets/bgm/' + scene.bgm;
 
-  if (bgmPlayer.src !== newBgmSrc) {
-    // BGMが違う時だけ切り替え
-    bgmPlayer.src = newBgmSrc;
-    bgmPlayer.loop = true;
-    bgmPlayer.play();
-  }
+    if (bgmPlayer.src !== newBgmSrc) {
+        // まずフェードアウト（再生中のみ）
+        if (!bgmPlayer.paused) {
+            fadeOutAudio(bgmPlayer, 1000, () => {
+                bgmPlayer.src = newBgmSrc;
+                bgmPlayer.loop = true;
+                bgmPlayer.volume = userVolume; // ← ユーザー音量に戻す
+                bgmPlayer.play();
+            });
+        } else {
+            bgmPlayer.src = newBgmSrc;
+            bgmPlayer.loop = true;
+            bgmPlayer.volume = userVolume;
+            bgmPlayer.play();
+        }
+    }
 } else {
-  // scene.bgm が空の時だけ止める
-  bgmPlayer.pause();
-  bgmPlayer.src = '';
+    // scene.bgm が空 → フェードアウトして止める
+    if (!bgmPlayer.paused) {
+        fadeOutAudio(bgmPlayer, 1000, () => {
+            bgmPlayer.src = '';
+        });
+    }
 }
 
 
@@ -298,6 +319,25 @@ if (autoMode && isSceneAuto) {
 
   playAnimation(scene.post_animation, scene.fade_color, scene.fade_duration);
 
+}
+
+function fadeOutAudio(audio, duration = 1000, callback) {
+    const stepTime = 50;
+    const steps = duration / stepTime;
+    const startVolume = userVolume; // ← ユーザー設定の音量基準
+    const volumeStep = startVolume / steps;
+
+    const fadeInterval = setInterval(() => {
+        if (audio.volume - volumeStep > 0) {
+            audio.volume -= volumeStep;
+        } else {
+            audio.volume = 0;
+            clearInterval(fadeInterval);
+            audio.pause();
+            audio.volume = startVolume; // ← ユーザー設定音量に戻す
+            if (callback) callback();
+        }
+    }, stepTime);
 }
 
 function showLine() {
@@ -558,6 +598,9 @@ function playAnimation(type, color, duration, callback) {
         case 'shake':
             shakeBackground(duration, callback);
             break;
+        case 'slide':
+            slideTransition(color, duration, callback);
+            break;
         default:
             console.warn('未対応のアニメーション: ' + type);
             if (callback) callback();
@@ -727,8 +770,8 @@ function showEnding() {
 
   const messages = [
   '幽霊病棟   Chapter 1',
-  'Audio<br>DOVA-SYNDROME / 効果音ラボ / 無料効果音で遊ぼう！',
-  'Script & Backgrounds<br>Powered by OpenAI',
+  'Audio<br><br>DOVA-SYNDROME<br>効果音ラボ<br>無料効果音で遊ぼう！',
+  'Script & Backgrounds<br><br>Powered by OpenAI',
   '©MIMIRIUM'
   ];
 
@@ -773,15 +816,68 @@ function showEnding() {
   }, 1600); // 黒フェード後に1文目表示
 }
 
+function slideTransition(color, duration, callback) {
+    const overlay = document.getElementById('slide-overlay');
+    overlay.style.backgroundColor = color || 'black';
 
+    let timeInSec;
+    if (!duration) {
+        timeInSec = 0.5;
+    } else if (duration >= 10) {
+        timeInSec = duration / 1000;
+    } else {
+        timeInSec = duration;
+    }
+
+    overlay.style.transition = `left ${timeInSec}s ease`;
+
+    // 初期位置を右側にセット
+    overlay.style.left = '100%';
+    void overlay.offsetWidth; // reflow強制
+
+    // スライドイン開始（右→左）
+    overlay.style.left = '0';
+
+    overlay.addEventListener('transitionend', function handler() {
+        overlay.removeEventListener('transitionend', handler);
+
+        // コールバック実行（必要なら処理）
+        if (callback) callback();
+
+        // スライドアウト開始（左→さらに左外）
+        overlay.style.transition = `left ${timeInSec}s ease`;
+        void overlay.offsetWidth; // reflow強制
+        overlay.style.left = '-100%';
+
+        overlay.addEventListener('transitionend', function resetHandler() {
+            overlay.removeEventListener('transitionend', resetHandler);
+            // リセット（次のために右外へ戻す）
+            overlay.style.transition = 'none';
+            overlay.style.left = '100%';
+        });
+    });
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    const bgmSlider = document.getElementById('bgm-volume');
+    bgmSlider.value = bgmPlayer.volume;
+    userVolume = bgmPlayer.volume;
+
+    const seSlider = document.getElementById('se-volume');
+    seSlider.value = sePlayer.volume;
+    userSEVolume = sePlayer.volume;
+});
 
 
 // 音量変更時の処理
 document.getElementById('bgm-volume').addEventListener('input', function() {
   bgmPlayer.volume = parseFloat(this.value);
+  userVolume = bgmPlayer.volume; // ← ここで常に最新を保存
 });
+
 document.getElementById('se-volume').addEventListener('input', function() {
   sePlayer.volume = parseFloat(this.value);
+  userSEVolume = sePlayer.volume;
 });
 
   </script>
