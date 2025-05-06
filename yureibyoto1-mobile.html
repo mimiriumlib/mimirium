@@ -108,7 +108,7 @@
           <img src="assets/yure-image/hiru-entrance.png" alt="scene206">
           <span>第3章<br>出会い</span>
         </button>
-        <button class="scene-modal-button" onclick="selectScene(238)">
+        <button class="scene-modal-button" onclick="selectScene(310)">
           <img src="assets/yure-image/hiru-entrance.png" alt="scene207">
           <span>第4章<br>デバッグ用</span>
         </button>
@@ -128,6 +128,8 @@
   </div>
   
   <div id="slide-overlay"></div>
+  <div id="fade-overlay"></div>
+
 
 
   <script>
@@ -176,12 +178,13 @@ function fadeOut(color = '#000', duration = 1000, callback = null) {
     });
 
     setTimeout(async () => {
-        if (callback) await callback();  // showScene完了まで待つ
+        
         setTimeout(() => {  // フェード除去はさらに後ろに
             fade.classList.remove('active');
             fade.style.opacity = 0;
             window.scrollTo(0, 0);
             isFading = false;
+            if (callback) callback();  // showScene完了まで待つ
         }, 500);  // 300ms猶予（必要なら調整）
     }, duration);
 
@@ -227,6 +230,8 @@ let autoTimer = null;         // オート用タイマー
 let autoMode = false;
 let isFading = false;
 let isLocked = false;
+let isWaiting = false;
+
 const bgmPlayer = document.getElementById('bgm-player');  // ここに移動！
 bgmPlayer.volume = 0.3;
 const sePlayer = document.getElementById('se-player');
@@ -260,9 +265,15 @@ function startGame() {
 }
 
 // シーン表示
-async function showScene() {
+async function showScene(transitionType = '', transitionColor = '#000', transitionDuration = 500) {
   console.log('セーブしました！前シーン:', currentScene);
+  console.log('受け取ったデータ', transitionType,transitionColor,transitionDuration);
   const scene = scenarioData[currentScene];
+  if (transitionType === 'fadeOut') {
+        await fadeToBlack(transitionColor, transitionDuration);
+    } else if (transitionType === 'slide') {
+        await slideToBlack(transitionColor, transitionDuration);
+  }
   const textElement = document.getElementById('text-line');
   textElement.innerHTML = '';
 
@@ -348,6 +359,12 @@ if (autoMode && isSceneAuto) {
   stopAutoScene(); // いったん停止（明示的に）
 }
 
+    if (transitionType === 'fadeOut') {
+        await fadeFromBlack(transitionDuration);
+    } else if (transitionType === 'slide') {
+        await slideFromBlack(transitionDuration);
+    }
+
   // シーン表示の最後にセーブ！
   localStorage.setItem('currentScene', currentScene);
   console.log('セーブしました！シーン:', currentScene);
@@ -356,6 +373,56 @@ if (autoMode && isSceneAuto) {
 
   safeScrollToTop();
 
+}
+
+async function fadeToBlack(color, duration) {
+    const overlay = document.getElementById('fade-overlay');
+    overlay.style.backgroundColor = color || 'black';
+    overlay.style.transition = `opacity ${duration / 1000}s ease`;
+    overlay.style.opacity = '0';
+    void overlay.offsetWidth;
+    overlay.style.opacity = '1';
+    return new Promise(resolve => {
+        setTimeout(resolve, duration);
+    });
+}
+
+async function fadeFromBlack(duration) {
+    const overlay = document.getElementById('fade-overlay');
+    overlay.style.transition = `opacity ${duration / 1000}s ease`;
+    overlay.style.opacity = '0';
+    return new Promise(resolve => {
+        setTimeout(resolve, duration);
+    });
+}
+
+async function slideToBlack(color, duration) {
+    const overlay = document.getElementById('slide-overlay');
+    overlay.style.backgroundColor = color || 'black';
+    overlay.style.transition = `left ${duration / 1000}s ease`;
+    overlay.style.left = '100%';
+    void overlay.offsetWidth;
+    overlay.style.left = '0';
+    return new Promise(resolve => {
+        overlay.addEventListener('transitionend', function handler() {
+            overlay.removeEventListener('transitionend', handler);
+            resolve();
+        });
+    });
+}
+
+async function slideFromBlack(duration) {
+    const overlay = document.getElementById('slide-overlay');
+    overlay.style.transition = `left ${duration / 1000}s ease`;
+    overlay.style.left = '-100%';
+    return new Promise(resolve => {
+        overlay.addEventListener('transitionend', function handler() {
+            overlay.removeEventListener('transitionend', handler);
+            overlay.style.transition = 'none';
+            overlay.style.left = '100%';
+            resolve();
+        });
+    });
 }
 
 function safeScrollToTop() {
@@ -419,11 +486,17 @@ function showNextLine() {
         return;
       }
 
-      playAnimation(nextScene.pre_animation, nextScene.fade_color, nextScene.fade_duration, () => {
-        currentScene++;
-        currentLine = 1;
-        showScene();
-      });
+      if (nextScene.pre_animation === 'fadeOut' || nextScene.pre_animation === 'slide') {
+                currentScene++;
+                currentLine = 1;
+                showScene(nextScene.pre_animation, nextScene.fade_color, nextScene.fade_duration);
+            } else {
+                playAnimation(nextScene.pre_animation, nextScene.fade_color, nextScene.fade_duration, () => {
+                    currentScene++;
+                    currentLine = 1;
+                    showScene();
+                });
+            }
     }
   }
 }
@@ -573,6 +646,7 @@ function showChoices(scene) {
 function advanceHandler() {
     if (isLocked) return;
     if (isFading) return;
+    if (isWaiting) return;
 
 isLocked = true;         // ロック開始
 setTimeout(() => {
@@ -593,6 +667,7 @@ function keyHandler(e) {
 
 function toggleNext(enable) {
   const gameContent = document.getElementById('game-content');
+  if (isFading || isWaiting) enable = false;
 
   if (enable) {
     gameContent.addEventListener('click', advanceHandler);
@@ -640,6 +715,14 @@ function playAnimation(type, color, duration, callback) {
             break;
         case 'slide':
             slideTransition(color, duration, callback);
+            break;
+        case 'wait':
+            console.log(`wait: ${duration}ms`);
+            isWaiting = true;
+            setTimeout(() => {
+              isWaiting = false;
+              if (callback) callback();
+            }, duration);
             break;
         default:
             console.warn('未対応のアニメーション: ' + type);
