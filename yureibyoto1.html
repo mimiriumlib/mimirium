@@ -94,7 +94,7 @@
           <img src="assets/yure-image/yoru-roka.png" alt="scene3">
           <span>第1章<br>はじまりの廊下</span>
         </button>
-        <button class="scene-modal-button" onclick="selectScene(82)">
+        <button class="scene-modal-button" onclick="selectScene(81)">
           <img src="assets/yure-image/hiru-roka1.png" alt="scene82">
           <span>第2章<br>朝の訪れ</span>
         </button>
@@ -180,6 +180,7 @@ function fadeIn(color = '#000', duration = 1000, callback = null) {
     let scenarioData = [];
 let currentScene = 0;
 let currentLine = 0;
+let currentLineText = '';
 let textInterval = null;
 let isTyping = false;      // 文字を描画中かどうか
 let logHistory = []; // ログを貯める配列
@@ -191,7 +192,7 @@ bgmPlayer.volume = 0.3;
 const sePlayer = document.getElementById('se-player');
 sePlayer.volume = 0.4;
 let userVolume = bgmPlayer.volume;
-let userSEVolume = bgmPlayer.volume;
+let userSEVolume = sePlayer.volume;
 
 // 警告クリック時のイベントは最初に登録！
 document.getElementById('warning').addEventListener('click', function() {
@@ -344,6 +345,7 @@ function showLine() {
   const scene = scenarioData[currentScene];
   const line = scene['text' + currentLine];
   const textElement = document.getElementById('text-line');
+  currentLineText = line;
 
   if (textInterval) clearInterval(textInterval);
 
@@ -690,9 +692,14 @@ function startAutoScene() {
 
   if (!autoMode) return;
 
+  // 文字数に応じた時間調整
+  const baseTime = 1000;      // 最短1.5秒
+  const timePerChar = 80;    // 1文字あたり100ms
+  const totalTime = baseTime + currentLineText.length * timePerChar;
+
   autoTimer = setInterval(() => {
     showNextLine();
-  }, 3000); // 例：2.5秒ごとに次のセリフへ
+  }, totalTime);
 }
 
 function stopAutoScene() {

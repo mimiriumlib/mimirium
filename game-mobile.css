@@ -167,10 +167,12 @@ body {
   }
 
   #choices {
-    margin-top: 50px; /* 上の余白を少し縮める */
+    margin-top: 70px; /* 上の余白を少し縮める */
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 .choice-button {
