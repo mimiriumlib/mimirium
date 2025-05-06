@@ -558,7 +558,7 @@ body {
   overflow: hidden;
 }
 
-#black-overlay {
+#fade-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -568,6 +568,6 @@ body {
   opacity: 0;                 /* 初期は透明 */
   pointer-events: none;       /* 操作を邪魔しない */
   z-index: 9999;              /* 画面最前面に置く */
-  transition: opacity 0.5s ease;  /* デフォルトのフェード速度 */
+  transition: opacity 0.5s ease;
   overflow: hidden;
 }

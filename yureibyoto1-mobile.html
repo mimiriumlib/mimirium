@@ -378,9 +378,7 @@ if (autoMode && isSceneAuto) {
 async function fadeToBlack(color, duration) {
     const overlay = document.getElementById('fade-overlay');
     overlay.style.backgroundColor = color || 'black';
-    overlay.style.transition = `opacity ${duration / 1000}s ease`;
-    overlay.style.opacity = '0';
-    void overlay.offsetWidth;
+    overlay.style.transition = `opacity ${duration}ms`;
     overlay.style.opacity = '1';
     return new Promise(resolve => {
         setTimeout(resolve, duration);
@@ -389,7 +387,7 @@ async function fadeToBlack(color, duration) {
 
 async function fadeFromBlack(duration) {
     const overlay = document.getElementById('fade-overlay');
-    overlay.style.transition = `opacity ${duration / 1000}s ease`;
+    overlay.style.transition = `opacity ${duration}ms`;
     overlay.style.opacity = '0';
     return new Promise(resolve => {
         setTimeout(resolve, duration);
