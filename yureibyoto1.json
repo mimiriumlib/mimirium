@@ -1,6 +1,6 @@
 [
   {
-    "scene_id": 1,
+    "scene_id": 0,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -27,7 +27,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 2,
+    "scene_id": 1,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -54,7 +54,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 3,
+    "scene_id": 2,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -81,7 +81,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 4,
+    "scene_id": 3,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -108,7 +108,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 5,
+    "scene_id": 4,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -135,7 +135,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 6,
+    "scene_id": 5,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -162,7 +162,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 7,
+    "scene_id": 6,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -189,7 +189,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 8,
+    "scene_id": 7,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -216,7 +216,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 9,
+    "scene_id": 8,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -243,7 +243,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 10,
+    "scene_id": 9,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -270,7 +270,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 11,
+    "scene_id": 10,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -297,7 +297,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 12,
+    "scene_id": 11,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -324,7 +324,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 13,
+    "scene_id": 12,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -351,7 +351,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 14,
+    "scene_id": 13,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -378,7 +378,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 15,
+    "scene_id": 14,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -405,7 +405,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 16,
+    "scene_id": 15,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -432,7 +432,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 17,
+    "scene_id": 16,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -459,7 +459,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 18,
+    "scene_id": 17,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -486,7 +486,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 19,
+    "scene_id": 18,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -513,7 +513,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 20,
+    "scene_id": 19,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -540,7 +540,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 21,
+    "scene_id": 20,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -567,7 +567,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 22,
+    "scene_id": 21,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -594,7 +594,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 23,
+    "scene_id": 22,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -621,7 +621,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 24,
+    "scene_id": 23,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -648,7 +648,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 25,
+    "scene_id": 24,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -675,7 +675,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 26,
+    "scene_id": 25,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -702,7 +702,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 27,
+    "scene_id": 26,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -729,7 +729,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 28,
+    "scene_id": 27,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -756,7 +756,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 29,
+    "scene_id": 28,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -783,7 +783,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 30,
+    "scene_id": 29,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -810,7 +810,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 31,
+    "scene_id": 30,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -837,7 +837,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 32,
+    "scene_id": 31,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -864,7 +864,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 33,
+    "scene_id": 32,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -891,7 +891,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 34,
+    "scene_id": 33,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -918,7 +918,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 35,
+    "scene_id": 34,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -945,7 +945,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 36,
+    "scene_id": 35,
     "background": "yureismile.png",
     "character_left": "",
     "character_right": "",
@@ -972,7 +972,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 37,
+    "scene_id": 36,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -999,7 +999,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 38,
+    "scene_id": 37,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -1026,7 +1026,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 39,
+    "scene_id": 38,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -1053,7 +1053,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 40,
+    "scene_id": 39,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -1080,7 +1080,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 41,
+    "scene_id": 40,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -1107,7 +1107,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 42,
+    "scene_id": 41,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren2.png",
@@ -1134,7 +1134,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 43,
+    "scene_id": 42,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1161,7 +1161,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 44,
+    "scene_id": 43,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1188,7 +1188,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 45,
+    "scene_id": 44,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1215,7 +1215,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 46,
+    "scene_id": 45,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1242,7 +1242,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 47,
+    "scene_id": 46,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1269,7 +1269,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 48,
+    "scene_id": 47,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1296,7 +1296,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 49,
+    "scene_id": 48,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1323,7 +1323,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 50,
+    "scene_id": 49,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1350,7 +1350,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 51,
+    "scene_id": 50,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1377,7 +1377,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 52,
+    "scene_id": 51,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1404,7 +1404,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 53,
+    "scene_id": 52,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1431,7 +1431,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 54,
+    "scene_id": 53,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1458,7 +1458,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 55,
+    "scene_id": 54,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1485,7 +1485,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 56,
+    "scene_id": 55,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1512,7 +1512,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 57,
+    "scene_id": 56,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1539,7 +1539,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 58,
+    "scene_id": 57,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1566,7 +1566,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 59,
+    "scene_id": 58,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1593,7 +1593,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 60,
+    "scene_id": 59,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1620,7 +1620,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 61,
+    "scene_id": 60,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1647,7 +1647,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 62,
+    "scene_id": 61,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1674,7 +1674,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 63,
+    "scene_id": 62,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1701,7 +1701,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 64,
+    "scene_id": 63,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1728,7 +1728,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 65,
+    "scene_id": 64,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1755,7 +1755,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 66,
+    "scene_id": 65,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1782,7 +1782,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 67,
+    "scene_id": 66,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1809,7 +1809,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 68,
+    "scene_id": 67,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1836,7 +1836,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 69,
+    "scene_id": 68,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -1863,7 +1863,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 70,
+    "scene_id": 69,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -1890,7 +1890,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 71,
+    "scene_id": 70,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -1917,7 +1917,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 72,
+    "scene_id": 71,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -1944,7 +1944,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 73,
+    "scene_id": 72,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -1971,7 +1971,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 74,
+    "scene_id": 73,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -1998,7 +1998,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 75,
+    "scene_id": 74,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -2025,7 +2025,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 76,
+    "scene_id": 75,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -2052,7 +2052,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 77,
+    "scene_id": 76,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -2079,7 +2079,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 78,
+    "scene_id": 77,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -2106,7 +2106,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 79,
+    "scene_id": 78,
     "background": "yoru-roka.png",
     "character_left": "",
     "character_right": "",
@@ -2133,7 +2133,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 80,
+    "scene_id": 79,
     "background": "title.png",
     "character_left": "",
     "character_right": "",
@@ -2160,7 +2160,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 81,
+    "scene_id": 80,
     "background": "black.png",
     "character_left": "",
     "character_right": "",
@@ -2187,7 +2187,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 82,
+    "scene_id": 81,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2214,7 +2214,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 83,
+    "scene_id": 82,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2241,7 +2241,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 84,
+    "scene_id": 83,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2268,7 +2268,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 85,
+    "scene_id": 84,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2295,7 +2295,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 86,
+    "scene_id": 85,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2322,7 +2322,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 87,
+    "scene_id": 86,
     "background": "hiru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -2349,7 +2349,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 88,
+    "scene_id": 87,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2376,7 +2376,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 89,
+    "scene_id": 88,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2403,7 +2403,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 90,
+    "scene_id": 89,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2430,7 +2430,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 91,
+    "scene_id": 90,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2457,7 +2457,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 92,
+    "scene_id": 91,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2484,7 +2484,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 93,
+    "scene_id": 92,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2511,7 +2511,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 94,
+    "scene_id": 93,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2538,7 +2538,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 95,
+    "scene_id": 94,
     "background": "hiru-roka1.png",
     "character_left": "satoru1.png",
     "character_right": "",
@@ -2565,7 +2565,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 96,
+    "scene_id": 95,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2592,7 +2592,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 97,
+    "scene_id": 96,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2619,7 +2619,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 98,
+    "scene_id": 97,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2646,7 +2646,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 99,
+    "scene_id": 98,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2673,7 +2673,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 100,
+    "scene_id": 99,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2700,7 +2700,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 101,
+    "scene_id": 100,
     "background": "hiru-roka1.png",
     "character_left": "",
     "character_right": "",
@@ -2727,7 +2727,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 102,
+    "scene_id": 101,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2754,7 +2754,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 103,
+    "scene_id": 102,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2781,7 +2781,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 104,
+    "scene_id": 103,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2808,7 +2808,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 105,
+    "scene_id": 104,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2835,7 +2835,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 106,
+    "scene_id": 105,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2862,7 +2862,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 107,
+    "scene_id": 106,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2889,7 +2889,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 108,
+    "scene_id": 107,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2916,7 +2916,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 109,
+    "scene_id": 108,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2943,7 +2943,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 110,
+    "scene_id": 109,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2970,7 +2970,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 111,
+    "scene_id": 110,
     "background": "hiru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -2997,7 +2997,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 112,
+    "scene_id": 111,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3024,7 +3024,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 113,
+    "scene_id": 112,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3051,7 +3051,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 114,
+    "scene_id": 113,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3078,7 +3078,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 115,
+    "scene_id": 114,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3105,7 +3105,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 116,
+    "scene_id": 115,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3132,7 +3132,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 117,
+    "scene_id": 116,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3159,7 +3159,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 118,
+    "scene_id": 117,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3186,7 +3186,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 119,
+    "scene_id": 118,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3213,7 +3213,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 120,
+    "scene_id": 119,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3240,7 +3240,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 121,
+    "scene_id": 120,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3267,7 +3267,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 122,
+    "scene_id": 121,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -3294,7 +3294,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 123,
+    "scene_id": 122,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3321,7 +3321,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 124,
+    "scene_id": 123,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3348,7 +3348,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 125,
+    "scene_id": 124,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3375,7 +3375,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 126,
+    "scene_id": 125,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3402,10 +3402,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 127,
+    "scene_id": 126,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren3.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3429,10 +3429,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 128,
+    "scene_id": 127,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren3.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3456,7 +3456,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 129,
+    "scene_id": 128,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3483,7 +3483,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 130,
+    "scene_id": 129,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3510,7 +3510,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 131,
+    "scene_id": 130,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3537,7 +3537,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 132,
+    "scene_id": 131,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3564,7 +3564,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 133,
+    "scene_id": 132,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3591,7 +3591,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 134,
+    "scene_id": 133,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3618,10 +3618,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 135,
+    "scene_id": 134,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren3.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3645,7 +3645,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 136,
+    "scene_id": 135,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3672,7 +3672,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 137,
+    "scene_id": 136,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3699,10 +3699,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 138,
+    "scene_id": 137,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren4.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3726,10 +3726,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 139,
+    "scene_id": 138,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren3.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3753,7 +3753,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 140,
+    "scene_id": 139,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3780,7 +3780,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 141,
+    "scene_id": 140,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3807,7 +3807,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 142,
+    "scene_id": 141,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3834,7 +3834,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 143,
+    "scene_id": 142,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3861,7 +3861,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 144,
+    "scene_id": 143,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3888,7 +3888,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 145,
+    "scene_id": 144,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3915,10 +3915,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 146,
+    "scene_id": 145,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "ren1.png",
+    "character_right": "ren3.png",
     "bgm": "akogarehasonomamade.mp3",
     "se": "",
     "pre_animation": "",
@@ -3942,7 +3942,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 147,
+    "scene_id": 146,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3969,7 +3969,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 148,
+    "scene_id": 147,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -3996,7 +3996,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 149,
+    "scene_id": 148,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4023,7 +4023,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 150,
+    "scene_id": 149,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4050,7 +4050,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 151,
+    "scene_id": 150,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4077,7 +4077,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 152,
+    "scene_id": 151,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4104,7 +4104,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 153,
+    "scene_id": 152,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4131,7 +4131,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 154,
+    "scene_id": 153,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4158,7 +4158,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 155,
+    "scene_id": 154,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4185,7 +4185,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 156,
+    "scene_id": 155,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4212,7 +4212,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 157,
+    "scene_id": 156,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4239,7 +4239,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 158,
+    "scene_id": 157,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4266,7 +4266,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 159,
+    "scene_id": 158,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4293,7 +4293,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 160,
+    "scene_id": 159,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4320,7 +4320,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 161,
+    "scene_id": 160,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4347,7 +4347,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 162,
+    "scene_id": 161,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4374,7 +4374,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 163,
+    "scene_id": 162,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4401,7 +4401,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 164,
+    "scene_id": 163,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4428,7 +4428,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 165,
+    "scene_id": 164,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4455,7 +4455,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 166,
+    "scene_id": 165,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4482,7 +4482,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 167,
+    "scene_id": 166,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4509,7 +4509,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 168,
+    "scene_id": 167,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4536,7 +4536,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 169,
+    "scene_id": 168,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4563,7 +4563,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 170,
+    "scene_id": 169,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4590,7 +4590,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 171,
+    "scene_id": 170,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4617,7 +4617,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 172,
+    "scene_id": 171,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4644,7 +4644,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 173,
+    "scene_id": 172,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4671,7 +4671,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 174,
+    "scene_id": 173,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4698,7 +4698,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 175,
+    "scene_id": 174,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "ren1.png",
@@ -4725,7 +4725,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 176,
+    "scene_id": 175,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4752,7 +4752,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 177,
+    "scene_id": 176,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4779,7 +4779,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 178,
+    "scene_id": 177,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4806,7 +4806,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 179,
+    "scene_id": 178,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4833,7 +4833,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 180,
+    "scene_id": 179,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4860,7 +4860,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 181,
+    "scene_id": 180,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4887,7 +4887,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 182,
+    "scene_id": 181,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4914,7 +4914,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 183,
+    "scene_id": 182,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4941,7 +4941,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 184,
+    "scene_id": 183,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4968,7 +4968,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 185,
+    "scene_id": 184,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -4995,7 +4995,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 186,
+    "scene_id": 185,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5022,7 +5022,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 187,
+    "scene_id": 186,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5049,7 +5049,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 188,
+    "scene_id": 187,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5076,7 +5076,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 189,
+    "scene_id": 188,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5103,7 +5103,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 190,
+    "scene_id": 189,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5130,7 +5130,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 191,
+    "scene_id": 190,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5157,7 +5157,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 192,
+    "scene_id": 191,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5184,7 +5184,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 193,
+    "scene_id": 192,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5211,7 +5211,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 194,
+    "scene_id": 193,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5238,7 +5238,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 195,
+    "scene_id": 194,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5265,7 +5265,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 196,
+    "scene_id": 195,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5292,7 +5292,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 197,
+    "scene_id": 196,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5319,7 +5319,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 198,
+    "scene_id": 197,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5346,7 +5346,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 199,
+    "scene_id": 198,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5373,7 +5373,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 200,
+    "scene_id": 199,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5400,7 +5400,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 201,
+    "scene_id": 200,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5427,7 +5427,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 202,
+    "scene_id": 201,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5454,7 +5454,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 203,
+    "scene_id": 202,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5481,7 +5481,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 204,
+    "scene_id": 203,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5508,7 +5508,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 205,
+    "scene_id": 204,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5535,7 +5535,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 206,
+    "scene_id": 205,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -5562,10 +5562,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 207,
+    "scene_id": 206,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5589,10 +5589,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 208,
+    "scene_id": 207,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5616,10 +5616,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 209,
+    "scene_id": 208,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5643,10 +5643,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 210,
+    "scene_id": 209,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5670,10 +5670,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 211,
+    "scene_id": 210,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5697,10 +5697,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 212,
+    "scene_id": 211,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5724,10 +5724,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 213,
+    "scene_id": 212,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5751,10 +5751,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 214,
+    "scene_id": 213,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5778,10 +5778,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 215,
+    "scene_id": 214,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5805,10 +5805,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 216,
+    "scene_id": 215,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5832,10 +5832,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 217,
+    "scene_id": 216,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5859,10 +5859,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 218,
+    "scene_id": 217,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5886,10 +5886,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 219,
+    "scene_id": 218,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5913,10 +5913,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 220,
+    "scene_id": 219,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5940,10 +5940,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 221,
+    "scene_id": 220,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -5967,7 +5967,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 222,
+    "scene_id": 221,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -5994,7 +5994,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 223,
+    "scene_id": 222,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6021,7 +6021,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 224,
+    "scene_id": 223,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6048,7 +6048,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 225,
+    "scene_id": 224,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6075,10 +6075,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 226,
+    "scene_id": 225,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -6102,10 +6102,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 227,
+    "scene_id": 226,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka3.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -6129,7 +6129,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 228,
+    "scene_id": 227,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6156,7 +6156,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 229,
+    "scene_id": 228,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6183,7 +6183,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 230,
+    "scene_id": 229,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6210,7 +6210,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 231,
+    "scene_id": 230,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6224,7 +6224,7 @@
     "auto": true,
     "window": true,
     "text1": "「さあ？　興味もないし聞いてないけど、アイツから名乗ってるとこは見たことないわね。",
-    "text2": "自分のことは上司だとか、監督者だとか言ってるわね」",
+    "text2": "自分のことは上司だとか、監督者だとか言ってる」",
     "text3": "",
     "text4": "",
     "text5": "",
@@ -6237,10 +6237,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 232,
+    "scene_id": 231,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka2.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -6264,7 +6264,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 233,
+    "scene_id": 232,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6291,7 +6291,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 234,
+    "scene_id": 233,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6318,7 +6318,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 235,
+    "scene_id": 234,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6345,7 +6345,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 236,
+    "scene_id": 235,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6372,7 +6372,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 237,
+    "scene_id": 236,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6399,7 +6399,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 238,
+    "scene_id": 237,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6426,7 +6426,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 239,
+    "scene_id": 238,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6453,7 +6453,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 240,
+    "scene_id": 239,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6480,7 +6480,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 241,
+    "scene_id": 240,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6507,7 +6507,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 242,
+    "scene_id": 241,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6534,7 +6534,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 243,
+    "scene_id": 242,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6561,7 +6561,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 244,
+    "scene_id": 243,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6588,7 +6588,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 245,
+    "scene_id": 244,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6615,7 +6615,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 246,
+    "scene_id": 245,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6642,7 +6642,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 247,
+    "scene_id": 246,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6669,10 +6669,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 248,
+    "scene_id": 247,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka2.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -6696,10 +6696,10 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 249,
+    "scene_id": 248,
     "background": "hiru-entrance.png",
     "character_left": "",
-    "character_right": "yuka1.png",
+    "character_right": "yuka2.png",
     "bgm": "natunohizasini.mp3",
     "se": "",
     "pre_animation": "",
@@ -6723,7 +6723,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 250,
+    "scene_id": 249,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6750,7 +6750,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 251,
+    "scene_id": 250,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6777,7 +6777,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 252,
+    "scene_id": 251,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6804,7 +6804,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 253,
+    "scene_id": 252,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6831,7 +6831,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 254,
+    "scene_id": 253,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6858,7 +6858,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 255,
+    "scene_id": 254,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6885,7 +6885,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 256,
+    "scene_id": 255,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6912,7 +6912,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 257,
+    "scene_id": 256,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6939,7 +6939,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 258,
+    "scene_id": 257,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6966,7 +6966,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 259,
+    "scene_id": 258,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -6993,7 +6993,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 260,
+    "scene_id": 259,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7020,7 +7020,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 261,
+    "scene_id": 260,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7047,7 +7047,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 262,
+    "scene_id": 261,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7074,7 +7074,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 263,
+    "scene_id": 262,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7101,7 +7101,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 264,
+    "scene_id": 263,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7128,7 +7128,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 265,
+    "scene_id": 264,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7155,7 +7155,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 266,
+    "scene_id": 265,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7182,7 +7182,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 267,
+    "scene_id": 266,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7209,7 +7209,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 268,
+    "scene_id": 267,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7236,7 +7236,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 269,
+    "scene_id": 268,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7263,7 +7263,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 270,
+    "scene_id": 269,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7290,7 +7290,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 271,
+    "scene_id": 270,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7317,7 +7317,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 272,
+    "scene_id": 271,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7344,7 +7344,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 273,
+    "scene_id": 272,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7371,7 +7371,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 274,
+    "scene_id": 273,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7398,7 +7398,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 275,
+    "scene_id": 274,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7425,7 +7425,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 276,
+    "scene_id": 275,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7452,7 +7452,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 277,
+    "scene_id": 276,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7479,7 +7479,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 278,
+    "scene_id": 277,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7506,7 +7506,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 279,
+    "scene_id": 278,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7533,7 +7533,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 280,
+    "scene_id": 279,
     "background": "hiru-entrance.png",
     "character_left": "",
     "character_right": "yuka1.png",
@@ -7560,7 +7560,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 281,
+    "scene_id": 280,
     "background": "yugata-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -7587,7 +7587,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 282,
+    "scene_id": 281,
     "background": "yugata-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -7614,7 +7614,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 283,
+    "scene_id": 282,
     "background": "yoru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -7641,7 +7641,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 284,
+    "scene_id": 283,
     "background": "yoru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -7668,7 +7668,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 285,
+    "scene_id": 284,
     "background": "yoru-entrance.png",
     "character_left": "",
     "character_right": "",
@@ -7695,7 +7695,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 286,
+    "scene_id": 285,
     "background": "yoru-roka5.png",
     "character_left": "",
     "character_right": "",
@@ -7722,7 +7722,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 287,
+    "scene_id": 286,
     "background": "yoru-roka5.png",
     "character_left": "",
     "character_right": "",
@@ -7749,7 +7749,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 288,
+    "scene_id": 287,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7776,7 +7776,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 289,
+    "scene_id": 288,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7803,7 +7803,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 290,
+    "scene_id": 289,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7830,7 +7830,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 291,
+    "scene_id": 290,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7857,7 +7857,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 292,
+    "scene_id": 291,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7884,7 +7884,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 293,
+    "scene_id": 292,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7911,7 +7911,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 294,
+    "scene_id": 293,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7938,7 +7938,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 295,
+    "scene_id": 294,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7965,7 +7965,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 296,
+    "scene_id": 295,
     "background": "yoru-roka2.png",
     "character_left": "",
     "character_right": "",
@@ -7992,7 +7992,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 297,
+    "scene_id": 296,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8019,7 +8019,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 298,
+    "scene_id": 297,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8046,7 +8046,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 299,
+    "scene_id": 298,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8073,7 +8073,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 300,
+    "scene_id": 299,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8100,7 +8100,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 301,
+    "scene_id": 300,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8127,7 +8127,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 302,
+    "scene_id": 301,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8154,7 +8154,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 303,
+    "scene_id": 302,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8181,7 +8181,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 304,
+    "scene_id": 303,
     "background": "kana-roka.png",
     "character_left": "",
     "character_right": "",
@@ -8208,7 +8208,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 305,
+    "scene_id": 304,
     "background": "kana-roka.png",
     "character_left": "",
     "character_right": "",
@@ -8235,7 +8235,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 306,
+    "scene_id": 305,
     "background": "kana-roka.png",
     "character_left": "",
     "character_right": "",
@@ -8262,7 +8262,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 307,
+    "scene_id": 306,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8289,7 +8289,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 308,
+    "scene_id": 307,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8316,7 +8316,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 309,
+    "scene_id": 308,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8343,7 +8343,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 310,
+    "scene_id": 309,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8370,7 +8370,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 311,
+    "scene_id": 310,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8397,7 +8397,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 312,
+    "scene_id": 311,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8424,7 +8424,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 313,
+    "scene_id": 312,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8451,7 +8451,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 314,
+    "scene_id": 313,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8478,7 +8478,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 315,
+    "scene_id": 314,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8505,7 +8505,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 316,
+    "scene_id": 315,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8532,14 +8532,14 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 317,
+    "scene_id": 316,
     "background": "kana-roka.png",
     "character_left": "",
     "character_right": "",
     "bgm": "",
     "se": "iyanayokan.mp3",
     "pre_animation": "fadeOut",
-    "post_animation": "",
+    "post_animation": "wait",
     "fade_color": "#000",
     "fade_duration": 500,
     "menu": true,
@@ -8559,16 +8559,16 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 318,
-    "background": "yoru-roka3.png",
+    "scene_id": 317,
+    "background": "kana-roka.png",
     "character_left": "",
-    "character_right": "kana1.png",
+    "character_right": "",
     "bgm": "",
     "se": "",
-    "pre_animation": "slide",
+    "pre_animation": "wait",
     "post_animation": "",
-    "fade_color": "#000",
-    "fade_duration": 500,
+    "fade_color": "",
+    "fade_duration": 2000,
     "menu": true,
     "auto": true,
     "window": true,
@@ -8586,16 +8586,16 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 319,
+    "scene_id": 318,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
     "bgm": "",
     "se": "",
-    "pre_animation": "",
+    "pre_animation": "fadeOut",
     "post_animation": "",
-    "fade_color": "",
-    "fade_duration": "",
+    "fade_color": "#000",
+    "fade_duration": 1000,
     "menu": true,
     "auto": true,
     "window": true,
@@ -8613,7 +8613,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 320,
+    "scene_id": 319,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8640,7 +8640,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 321,
+    "scene_id": 320,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8667,7 +8667,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 322,
+    "scene_id": 321,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "kana1.png",
@@ -8694,7 +8694,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 323,
+    "scene_id": 322,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8721,7 +8721,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 324,
+    "scene_id": 323,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8748,7 +8748,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 325,
+    "scene_id": 324,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8775,7 +8775,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 326,
+    "scene_id": 325,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8802,7 +8802,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 327,
+    "scene_id": 326,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8829,7 +8829,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 328,
+    "scene_id": 327,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8856,7 +8856,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 329,
+    "scene_id": 328,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8883,7 +8883,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 330,
+    "scene_id": 329,
     "background": "yoru-roka3.png",
     "character_left": "satoru2.png",
     "character_right": "",
@@ -8910,7 +8910,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 331,
+    "scene_id": 330,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8937,7 +8937,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 332,
+    "scene_id": 331,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8964,7 +8964,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 333,
+    "scene_id": 332,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -8991,7 +8991,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 334,
+    "scene_id": 333,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9018,7 +9018,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 335,
+    "scene_id": 334,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9045,7 +9045,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 336,
+    "scene_id": 335,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9072,7 +9072,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 337,
+    "scene_id": 336,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9099,7 +9099,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 338,
+    "scene_id": 337,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9126,7 +9126,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 339,
+    "scene_id": 338,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9153,7 +9153,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 340,
+    "scene_id": 339,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9180,7 +9180,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 341,
+    "scene_id": 340,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9207,7 +9207,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 342,
+    "scene_id": 341,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9234,7 +9234,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 343,
+    "scene_id": 342,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9261,7 +9261,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 344,
+    "scene_id": 343,
     "background": "yoru-roka3.png",
     "character_left": "",
     "character_right": "",
@@ -9288,7 +9288,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 345,
+    "scene_id": 344,
     "background": "yoru-roka4.png",
     "character_left": "",
     "character_right": "",
@@ -9315,7 +9315,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 346,
+    "scene_id": 345,
     "background": "yoru-roka4.png",
     "character_left": "",
     "character_right": "",
@@ -9342,7 +9342,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 347,
+    "scene_id": 346,
     "background": "yoru-roka4.png",
     "character_left": "",
     "character_right": "",
@@ -9369,7 +9369,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 348,
+    "scene_id": 347,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9396,7 +9396,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 349,
+    "scene_id": 348,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9423,7 +9423,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 350,
+    "scene_id": 349,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9450,7 +9450,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 351,
+    "scene_id": 350,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9477,7 +9477,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 352,
+    "scene_id": 351,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9504,7 +9504,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 353,
+    "scene_id": 352,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9531,7 +9531,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 354,
+    "scene_id": 353,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9558,7 +9558,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 355,
+    "scene_id": 354,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9585,7 +9585,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 356,
+    "scene_id": 355,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9612,7 +9612,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 357,
+    "scene_id": 356,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9639,7 +9639,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 358,
+    "scene_id": 357,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9666,7 +9666,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 359,
+    "scene_id": 358,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9693,7 +9693,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 360,
+    "scene_id": 359,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9720,7 +9720,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 361,
+    "scene_id": 360,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9747,7 +9747,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 362,
+    "scene_id": 361,
     "background": "akari-byoshitsu1.png",
     "character_left": "",
     "character_right": "",
@@ -9774,7 +9774,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 363,
+    "scene_id": 362,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9801,7 +9801,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 364,
+    "scene_id": 363,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9828,7 +9828,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 365,
+    "scene_id": 364,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9855,7 +9855,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 366,
+    "scene_id": 365,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9882,7 +9882,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 367,
+    "scene_id": 366,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9909,7 +9909,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 368,
+    "scene_id": 367,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9936,7 +9936,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 369,
+    "scene_id": 368,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9963,7 +9963,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 370,
+    "scene_id": 369,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -9990,7 +9990,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 371,
+    "scene_id": 370,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10017,7 +10017,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 372,
+    "scene_id": 371,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10044,7 +10044,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 373,
+    "scene_id": 372,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10071,7 +10071,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 374,
+    "scene_id": 373,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10098,7 +10098,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 375,
+    "scene_id": 374,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10125,7 +10125,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 376,
+    "scene_id": 375,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10152,7 +10152,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 377,
+    "scene_id": 376,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10179,7 +10179,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 378,
+    "scene_id": 377,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10206,7 +10206,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 379,
+    "scene_id": 378,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10233,7 +10233,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 380,
+    "scene_id": 379,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10260,7 +10260,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 381,
+    "scene_id": 380,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10287,7 +10287,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 382,
+    "scene_id": 381,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10314,7 +10314,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 383,
+    "scene_id": 382,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10341,7 +10341,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 384,
+    "scene_id": 383,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10368,7 +10368,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 385,
+    "scene_id": 384,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10395,7 +10395,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 386,
+    "scene_id": 385,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10422,7 +10422,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 387,
+    "scene_id": 386,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10449,7 +10449,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 388,
+    "scene_id": 387,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10476,7 +10476,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 389,
+    "scene_id": 388,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10503,7 +10503,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 390,
+    "scene_id": 389,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10530,7 +10530,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 391,
+    "scene_id": 390,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10557,7 +10557,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 392,
+    "scene_id": 391,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10584,7 +10584,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 393,
+    "scene_id": 392,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10611,7 +10611,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 394,
+    "scene_id": 393,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10638,7 +10638,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 395,
+    "scene_id": 394,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10665,7 +10665,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 396,
+    "scene_id": 395,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10692,7 +10692,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 397,
+    "scene_id": 396,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10719,7 +10719,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 398,
+    "scene_id": 397,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10746,7 +10746,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 399,
+    "scene_id": 398,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10773,7 +10773,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 400,
+    "scene_id": 399,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10800,7 +10800,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 401,
+    "scene_id": 400,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10827,7 +10827,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 402,
+    "scene_id": 401,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10854,7 +10854,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 403,
+    "scene_id": 402,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10881,7 +10881,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 404,
+    "scene_id": 403,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10908,7 +10908,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 405,
+    "scene_id": 404,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10935,7 +10935,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 406,
+    "scene_id": 405,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10962,7 +10962,7 @@
     "choice3_jump": ""
   },
   {
-    "scene_id": 407,
+    "scene_id": 406,
     "background": "yoru-byoshitsu.png",
     "character_left": "",
     "character_right": "akari1.png",
@@ -10976,7 +10976,34 @@
     "auto": true,
     "window": true,
     "text1": "「そっか……だから」",
-    "text2": "「だから？」",
+    "text2": "",
+    "text3": "",
+    "text4": "",
+    "text5": "",
+    "text6": "",
+    "choice1_text": "",
+    "choice1_jump": "",
+    "choice2_text": "",
+    "choice2_jump": "",
+    "choice3_text": "",
+    "choice3_jump": ""
+  },
+  {
+    "scene_id": 407,
+    "background": "yoru-byoshitsu.png",
+    "character_left": "",
+    "character_right": "akari1.png",
+    "bgm": "rengesou.mp3",
+    "se": "",
+    "pre_animation": "",
+    "post_animation": "",
+    "fade_color": "",
+    "fade_duration": "",
+    "menu": true,
+    "auto": true,
+    "window": true,
+    "text1": "「だから？」",
+    "text2": "",
     "text3": "",
     "text4": "",
     "text5": "",
@@ -11083,7 +11110,7 @@
     "menu": true,
     "auto": true,
     "window": true,
-    "text1": "「そんな噂のせいで、この病院がみんなになんて呼ばれてるか知ってる？」",
+    "text1": "「そんな噂があるからさ、この病院、みんなになんて呼ばれてるか知ってる？」",
     "text2": "",
     "text3": "",
     "text4": "",
@@ -11974,7 +12001,7 @@
     "menu": true,
     "auto": true,
     "window": true,
-    "text1": "　幽霊病棟と呼ばれる、この切り離された狭い狭い世界の中で。",
+    "text1": "　幽霊病棟と呼ばれる、この切り離された狭い世界の中で。",
     "text2": "",
     "text3": "",
     "text4": "",
@@ -12001,7 +12028,7 @@
     "menu": true,
     "auto": true,
     "window": true,
-    "text1": "　僕の幽霊としての新たな生活が、この瞬間始まった。",
+    "text1": "　僕の幽霊としての生活が、この瞬間始まった。",
     "text2": "",
     "text3": "",
     "text4": "",
@@ -12020,33 +12047,6 @@
     "character_left": "",
     "character_right": "",
     "bgm": "rengesou.mp3",
-    "se": "",
-    "pre_animation": "",
-    "post_animation": "",
-    "fade_color": "",
-    "fade_duration": "",
-    "menu": true,
-    "auto": true,
-    "window": true,
-    "text1": "",
-    "text2": "",
-    "text3": "",
-    "text4": "",
-    "text5": "",
-    "text6": "",
-    "choice1_text": "",
-    "choice1_jump": "",
-    "choice2_text": "",
-    "choice2_jump": "",
-    "choice3_text": "",
-    "choice3_jump": ""
-  },
-  {
-    "scene_id": 447,
-    "background": "",
-    "character_left": "",
-    "character_right": "",
-    "bgm": "",
     "se": "",
     "pre_animation": "",
     "post_animation": "",
